@@ -1,0 +1,4319 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "f8785289381ddc61f2c875b9cf3ba12c07bba7a2",
+  "generatedAt": "2026-06-13T00:00:01.962Z",
+  "files": {
+    ".understand-anything/.understandignore": {
+      "filePath": ".understand-anything/.understandignore",
+      "contentHash": "882d49a3f6397d5697ab1118f7530f6442fa49fc0242493a3e8c769adb9263ea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 14,
+      "hasStructuralAnalysis": false
+    },
+    ".understand-anything/tmp/dryrun-scan.json": {
+      "filePath": ".understand-anything/tmp/dryrun-scan.json",
+      "contentHash": "316b6f03fd6202875844062edc445b165b72c6e10043cb2548e3beede2f96c76",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1671,
+      "hasStructuralAnalysis": true
+    },
+    ".understand-anything/tmp/scan-warnings.txt": {
+      "filePath": ".understand-anything/tmp/scan-warnings.txt",
+      "contentHash": "1886ffb31bbc2ea232389a861f9b4f83c6f64e849cd4b928ad3f345293454b3e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": false
+    },
+    "ACCESS-MODES.md": {
+      "filePath": "ACCESS-MODES.md",
+      "contentHash": "d8222690a48cfd57746287243e7af172e0ba7d505ca9db31d89cf8e493ee7bac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "CONTRIBUTING.md": {
+      "filePath": "CONTRIBUTING.md",
+      "contentHash": "3c56a033c24f61e8db207953a68460dacc765c74469f37159c8dfc7a071361b7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "evals/README.md": {
+      "filePath": "evals/README.md",
+      "contentHash": "cced7de16e2e66d1a5d1a92949e4ed5d9faf5d855625ee3f7cf74f46a2c8bbd5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "PR-READINESS.md": {
+      "filePath": "PR-READINESS.md",
+      "contentHash": "779d3bbba2a6d15fc6181a77f559d2045970d3ff4eed6f35452787804d68851a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": true
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "3d9a156e611c6c338d30ec0102f1c2418968d596ebe02c4cbcb575fc265b9aee",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 95,
+      "hasStructuralAnalysis": true
+    },
+    "skills/action-items-from-client-alert/examples/example_clear_alert.md": {
+      "filePath": "skills/action-items-from-client-alert/examples/example_clear_alert.md",
+      "contentHash": "289aadfe1f78adbb55d645717d10c3c5dafa1bf1c1afb30c3a013811873e51d4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 184,
+      "hasStructuralAnalysis": true
+    },
+    "skills/action-items-from-client-alert/examples/example_multi_jurisdiction.md": {
+      "filePath": "skills/action-items-from-client-alert/examples/example_multi_jurisdiction.md",
+      "contentHash": "7c718d56677237da822d0572844ab64207dc198259b81972b7f5ad1a5fd8d0d9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 232,
+      "hasStructuralAnalysis": true
+    },
+    "skills/action-items-from-client-alert/examples/example_vague_alert.md": {
+      "filePath": "skills/action-items-from-client-alert/examples/example_vague_alert.md",
+      "contentHash": "a90627a3d6c46f31496fd3d37c1ad816a803aa2a675a43f27ee81ee25cb75572",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 169,
+      "hasStructuralAnalysis": true
+    },
+    "skills/action-items-from-client-alert/reference/deadline_calibration.md": {
+      "filePath": "skills/action-items-from-client-alert/reference/deadline_calibration.md",
+      "contentHash": "49acc52d8a46c643118f1b58576b9d8d79b026b0fb942da1f757091255930b8b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 135,
+      "hasStructuralAnalysis": true
+    },
+    "skills/action-items-from-client-alert/reference/extraction_patterns.md": {
+      "filePath": "skills/action-items-from-client-alert/reference/extraction_patterns.md",
+      "contentHash": "66410e0e9f05e5e67bb377df19b66446750314b9226a6e5f5134f05629719d6f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 136,
+      "hasStructuralAnalysis": true
+    },
+    "skills/action-items-from-client-alert/SKILL.md": {
+      "filePath": "skills/action-items-from-client-alert/SKILL.md",
+      "contentHash": "2b3410558234f2f7c4ffa9f790a63a555bfa64f0c4f77072f4711356c4f87a83",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 227,
+      "hasStructuralAnalysis": true
+    },
+    "skills/action-items-from-client-alert/test-plan.md": {
+      "filePath": "skills/action-items-from-client-alert/test-plan.md",
+      "contentHash": "b97f9d852988a4549e1d849f9da173cbb9afa603552c91df73ec8a1aa439dcbe",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 177,
+      "hasStructuralAnalysis": true
+    },
+    "skills/adversarial-qc/README.md": {
+      "filePath": "skills/adversarial-qc/README.md",
+      "contentHash": "444121e46977a74ff0f3f37afc8e5d1c694d747362ad1d78c0686126259b20be",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 92,
+      "hasStructuralAnalysis": true
+    },
+    "skills/adversarial-qc/references/certificate-template.md": {
+      "filePath": "skills/adversarial-qc/references/certificate-template.md",
+      "contentHash": "959475c1cf251e4c2ea258f1c7368d9ae0487090d76cb371b2d835b58bc9a4e1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": true
+    },
+    "skills/adversarial-qc/references/checklist.md": {
+      "filePath": "skills/adversarial-qc/references/checklist.md",
+      "contentHash": "72ae2c1eda8c96e3c7621c11305cfbb66be973328ee62b431ec61c403ac9afae",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": true
+    },
+    "skills/adversarial-qc/references/config.md": {
+      "filePath": "skills/adversarial-qc/references/config.md",
+      "contentHash": "e7cb387d69a4b30845d292fa59759bb4d3446a24198d799a5911ca180db379aa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 69,
+      "hasStructuralAnalysis": true
+    },
+    "skills/adversarial-qc/references/custom-checklists.md": {
+      "filePath": "skills/adversarial-qc/references/custom-checklists.md",
+      "contentHash": "b13a9f4bd162040b8c5b948dc196da9ea5526e0ad116e466bcb216d595612b16",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 103,
+      "hasStructuralAnalysis": true
+    },
+    "skills/adversarial-qc/SKILL.md": {
+      "filePath": "skills/adversarial-qc/SKILL.md",
+      "contentHash": "4f94fb901dc664c6b7e43ed7eee95b5236fcecc11a0480204ab2abbbde8849b0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 178,
+      "hasStructuralAnalysis": true
+    },
+    "skills/bart-statutory-reference-checker/SKILL.md": {
+      "filePath": "skills/bart-statutory-reference-checker/SKILL.md",
+      "contentHash": "78a1e95ed8e888611b1bcae748c4b4cc8e5097bfa0dd8ae71d0cf9066caca29a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 113,
+      "hasStructuralAnalysis": true
+    },
+    "skills/building-chronologies/evals.yaml": {
+      "filePath": "skills/building-chronologies/evals.yaml",
+      "contentHash": "b926c5f8689ff125991f564f80ad97bad161212d1e4a184644a85fceb64f2f1b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    "skills/building-chronologies/examples/output.md": {
+      "filePath": "skills/building-chronologies/examples/output.md",
+      "contentHash": "7b8d0c37b18017bc9b3a679cefb2b6a14cf935a20a02952f91de520887a1aff2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "skills/building-chronologies/README.md": {
+      "filePath": "skills/building-chronologies/README.md",
+      "contentHash": "bd2ffcfc229a59c6eb449da36d069b1a32175a0cb2a960e02a5f93f4bed97fa1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "skills/building-chronologies/references/chronology-model.md": {
+      "filePath": "skills/building-chronologies/references/chronology-model.md",
+      "contentHash": "690ddb9ba0f456507fb725bf12a675db8d70f2dc55b3e1810787d06847690ca0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 82,
+      "hasStructuralAnalysis": true
+    },
+    "skills/building-chronologies/SKILL.md": {
+      "filePath": "skills/building-chronologies/SKILL.md",
+      "contentHash": "ebf1aea132ed3250134e44ac5be8f9e04aa40284eaf2d316c0871245b843072b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 168,
+      "hasStructuralAnalysis": true
+    },
+    "skills/california-property-tax/references/boe-navigation-cheatsheet.md": {
+      "filePath": "skills/california-property-tax/references/boe-navigation-cheatsheet.md",
+      "contentHash": "064ddac2260ec24bf5bf42817b072647e17e694c3cf1df961d80c37cb5224592",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "skills/california-property-tax/references/output-template.md": {
+      "filePath": "skills/california-property-tax/references/output-template.md",
+      "contentHash": "6407bacd43b7ea4494b117abf7811253667f47ec498d1eaf3ad3947a15445557",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "skills/california-property-tax/SKILL.md": {
+      "filePath": "skills/california-property-tax/SKILL.md",
+      "contentHash": "21e079ca08a1775b53f787adf03a83f878cf78392517b36d3dacc04ae6695480",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 181,
+      "hasStructuralAnalysis": true
+    },
+    "skills/case-file-analyzer/references/configuration.md": {
+      "filePath": "skills/case-file-analyzer/references/configuration.md",
+      "contentHash": "094a8b2f507ff88ed7cc01c2e46e9f0f8135f9d7e3e0d7b855926450b5ac69bb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "skills/case-file-analyzer/references/definitions.md": {
+      "filePath": "skills/case-file-analyzer/references/definitions.md",
+      "contentHash": "ad06f0ea0de294b912dc83659924030d70ce8b540710c1b6667573e3903d432f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "skills/case-file-analyzer/references/PRD.md": {
+      "filePath": "skills/case-file-analyzer/references/PRD.md",
+      "contentHash": "9a3169630b88691599c4fbc5bfb319e839c2183c386fbd62000d47717cf699fd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "skills/case-file-analyzer/references/ralphing_skill.md": {
+      "filePath": "skills/case-file-analyzer/references/ralphing_skill.md",
+      "contentHash": "e63cf1d82e705303725e25ca1c519b62e6b06522a2a20b39629643152399ee5b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "skills/case-file-analyzer/references/templates.md": {
+      "filePath": "skills/case-file-analyzer/references/templates.md",
+      "contentHash": "60dce66ed029eb78746395c18cf2ad5ed36f62a1eaeb53e128ba7bc1d4b7649a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 51,
+      "hasStructuralAnalysis": true
+    },
+    "skills/case-file-analyzer/SKILL.md": {
+      "filePath": "skills/case-file-analyzer/SKILL.md",
+      "contentHash": "10ec726da50d4314cee8b9f5b960a42a8c9e6bcda896a8872cc07cf34de3e6cd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 122,
+      "hasStructuralAnalysis": true
+    },
+    "skills/classify-ccp/assets/examples.md": {
+      "filePath": "skills/classify-ccp/assets/examples.md",
+      "contentHash": "7ae318ea593e0fd1203180f9db510f7896b8a45c85c9f3768f2a2579a50720b5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "skills/classify-ccp/assets/ScratchpadTemplate.md": {
+      "filePath": "skills/classify-ccp/assets/ScratchpadTemplate.md",
+      "contentHash": "96daa0cf0d5d7c53f4c48704a1f6273c74a11786a1125f9a8cc4f95c7e5a2a36",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "skills/classify-ccp/SKILL.md": {
+      "filePath": "skills/classify-ccp/SKILL.md",
+      "contentHash": "7472c13cafd99d432f1ac97ffcebe3e64b8abefe84da9d9448393318980e86a2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 203,
+      "hasStructuralAnalysis": true
+    },
+    "skills/collating-reviewer-feedback/evals.yaml": {
+      "filePath": "skills/collating-reviewer-feedback/evals.yaml",
+      "contentHash": "4895914f4abb6e6f1f2bb7a5864d5706cf3778ffb38e0185026b746dc2eaa89b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "skills/collating-reviewer-feedback/examples/output.md": {
+      "filePath": "skills/collating-reviewer-feedback/examples/output.md",
+      "contentHash": "b9c049f007daf18110aa64180c5882d048bd20248fd8eef6d150a41d48114a3e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "skills/collating-reviewer-feedback/README.md": {
+      "filePath": "skills/collating-reviewer-feedback/README.md",
+      "contentHash": "d86dc14fdf86914334a9b7ab717af61ecc1519c5dfb79961ce1ae3323abec772",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "skills/collating-reviewer-feedback/references/reviewer-markup-model.md": {
+      "filePath": "skills/collating-reviewer-feedback/references/reviewer-markup-model.md",
+      "contentHash": "e0cd3d7a01f500280d62a75385dce38c56891b75aa56d88afa5410f15dbbd540",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 88,
+      "hasStructuralAnalysis": true
+    },
+    "skills/collating-reviewer-feedback/SKILL.md": {
+      "filePath": "skills/collating-reviewer-feedback/SKILL.md",
+      "contentHash": "ff3949ca0a9d7560c5db1729437f18ac0e219d18883559263d47dbb00fca9238",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 151,
+      "hasStructuralAnalysis": true
+    },
+    "skills/comms-improver/examples/example_customer_disclaimer.md": {
+      "filePath": "skills/comms-improver/examples/example_customer_disclaimer.md",
+      "contentHash": "1c4ffec6caaf9b32251ada93f642862f87b596565340de3f15981382a8d73ce2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 86,
+      "hasStructuralAnalysis": true
+    },
+    "skills/comms-improver/examples/example_executive_briefing.md": {
+      "filePath": "skills/comms-improver/examples/example_executive_briefing.md",
+      "contentHash": "c76f2e1cd37f748a9f336f3f4ff2119bbac6c896a7f3debc7fa9cc031a72f3af",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "skills/comms-improver/examples/example_sales_team.md": {
+      "filePath": "skills/comms-improver/examples/example_sales_team.md",
+      "contentHash": "8d9607e629206df14162377bb7b5c57938f29916b09650a98d0094c0a16fb4e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 97,
+      "hasStructuralAnalysis": true
+    },
+    "skills/comms-improver/reference/audience_calibration.md": {
+      "filePath": "skills/comms-improver/reference/audience_calibration.md",
+      "contentHash": "c24c0701a1868e0a74a25076a63d422223d7c26d15c010f5aed0449323ab2206",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 131,
+      "hasStructuralAnalysis": true
+    },
+    "skills/comms-improver/reference/legal_to_plain_patterns.md": {
+      "filePath": "skills/comms-improver/reference/legal_to_plain_patterns.md",
+      "contentHash": "0708f260b97c2a24c26e13fb647c75f5063c85ac905c801789411ef6f62d34c2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 157,
+      "hasStructuralAnalysis": true
+    },
+    "skills/comms-improver/SKILL.md": {
+      "filePath": "skills/comms-improver/SKILL.md",
+      "contentHash": "2d4d876c2f4424ba5036815c5c2ad9357abe35b8a1532f84be42dc43bdb8d6ab",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 217,
+      "hasStructuralAnalysis": true
+    },
+    "skills/comms-improver/test-plan.md": {
+      "filePath": "skills/comms-improver/test-plan.md",
+      "contentHash": "0e365a2fddfc92e2bf9cf7d6e7735967d5111b3747c0038bbc8609b22b0f6361",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 182,
+      "hasStructuralAnalysis": true
+    },
+    "skills/contract-qa/examples/example_type_a_lookup.md": {
+      "filePath": "skills/contract-qa/examples/example_type_a_lookup.md",
+      "contentHash": "c6b9c084bbf1a2822f25eae22c31de6e6c27f656b2ee6d96874f02303e37dca7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": true
+    },
+    "skills/contract-qa/examples/example_type_c_unusualness.md": {
+      "filePath": "skills/contract-qa/examples/example_type_c_unusualness.md",
+      "contentHash": "1b0041238ab6b2fdd0e4c949e4b194da11cd87909165429538bf5979e7fc4a3a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "skills/contract-qa/examples/example_type_d_scenario.md": {
+      "filePath": "skills/contract-qa/examples/example_type_d_scenario.md",
+      "contentHash": "15ec2ff8410896a63bbf5cefa1c2fff2f825d2a695c274ff71cba2bc85fc3c79",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    "skills/contract-qa/examples/example_type_e_multi_issue.md": {
+      "filePath": "skills/contract-qa/examples/example_type_e_multi_issue.md",
+      "contentHash": "ee4653c31e095058bfb9219d340049c681ee88cf95a8627d2a80a0bc1469fee2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 113,
+      "hasStructuralAnalysis": true
+    },
+    "skills/contract-qa/reference/citation_format.md": {
+      "filePath": "skills/contract-qa/reference/citation_format.md",
+      "contentHash": "278f7f0ec89f75f51eb2466a377b9c07f8c7928ecc04bd6f687c8155a9a7be44",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 128,
+      "hasStructuralAnalysis": true
+    },
+    "skills/contract-qa/reference/question_classification.md": {
+      "filePath": "skills/contract-qa/reference/question_classification.md",
+      "contentHash": "4318209d67d51de38683dc5cbabb4a68f6ffaefb32fbb18da0a951b3aa52e90e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 158,
+      "hasStructuralAnalysis": true
+    },
+    "skills/contract-qa/SKILL.md": {
+      "filePath": "skills/contract-qa/SKILL.md",
+      "contentHash": "c08bc37cfe0bd6ae483e1cd9db7332a728f7822823be70be354f2941e0de2a41",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 308,
+      "hasStructuralAnalysis": true
+    },
+    "skills/contract-qa/test-plan.md": {
+      "filePath": "skills/contract-qa/test-plan.md",
+      "contentHash": "174badf52e0fb112a6b792a7bbb97a596546b95dc1937420820723e1132dd091",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 212,
+      "hasStructuralAnalysis": true
+    },
+    "skills/CONTRIBUTING.md": {
+      "filePath": "skills/CONTRIBUTING.md",
+      "contentHash": "6ade38fd248d4f5a0c9fc7cbb692778dc787d5e0efbfb291cd486bcd16c4d7d1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 275,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/advanced_interview.md": {
+      "filePath": "skills/coquill/advanced_interview.md",
+      "contentHash": "95d1b4fed458ae8c6a3c81ce78edd375703b586d38e32366c89465f5bb594199",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 101,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/analyzer/analyze.py": {
+      "filePath": "skills/coquill/analyzer/analyze.py",
+      "contentHash": "b7f43c5d51c6af6cb7371940ddd2e957b7e5d49854d994f284b5ef2cf5a83cf5",
+      "functions": [
+        {
+          "name": "detect_template",
+          "params": [
+            "template_dir"
+          ],
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "check_cache",
+          "params": [
+            "manifest_path",
+            "template_path",
+            "config_path"
+          ],
+          "exported": true,
+          "lineCount": 31
+        },
+        {
+          "name": "extract_text",
+          "params": [
+            "template_path",
+            "template_format"
+          ],
+          "exported": true,
+          "lineCount": 40
+        },
+        {
+          "name": "analyze_template",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 149
+        },
+        {
+          "name": "infer_type",
+          "params": [
+            "name",
+            "boolean_gate_vars"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "make_label",
+          "params": [
+            "name"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "build_var_entry",
+          "params": [
+            "name",
+            "boolean_gate_vars",
+            "infer_name"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "build_manifest",
+          "params": [
+            "template_dir",
+            "template_file",
+            "template_format",
+            "unconditional_vars",
+            "conditionals",
+            "loops",
+            "boolean_gate_vars",
+            "config_path"
+          ],
+          "exported": true,
+          "lineCount": 124
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 52
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "yaml",
+          "specifiers": [
+            "yaml"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime",
+            "timezone"
+          ]
+        }
+      ],
+      "exports": [
+        "detect_template",
+        "check_cache",
+        "extract_text",
+        "analyze_template",
+        "infer_type",
+        "make_label",
+        "build_var_entry",
+        "build_manifest",
+        "main"
+      ],
+      "totalLines": 474,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/analyzer/SKILL.md": {
+      "filePath": "skills/coquill/analyzer/SKILL.md",
+      "contentHash": "8d9cfc96637c777dd04e0d907943a30ddadf6a8b5ace3120aef32655c77865b0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 108,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/CHANGELOG.md": {
+      "filePath": "skills/coquill/CHANGELOG.md",
+      "contentHash": "9776493efeae74587fcae4a1bb4e7137c4ef35e4ddbfbadb2897d8b16b1c00de",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/README.md": {
+      "filePath": "skills/coquill/README.md",
+      "contentHash": "e0f7ef1a01964089462c0f89e4ed0263228eb24487d4b0fa89ab5d36d09a6b5b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/renderer/render.py": {
+      "filePath": "skills/coquill/renderer/render.py",
+      "contentHash": "a1800c1c81e7a80ff10c6711f5d66935dfb6bcbda919391b25d6bd471e99f854",
+      "functions": [
+        {
+          "name": "coerce_booleans",
+          "params": [
+            "context"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "create_job_dir",
+          "params": [
+            "output_dir",
+            "job_name"
+          ],
+          "returnType": "tuple[str, str]",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "validate_text",
+          "params": [
+            "text"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "validate_docx",
+          "params": [
+            "docx_path"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "render_docx",
+          "params": [
+            "template_path",
+            "context",
+            "job_dir",
+            "job_name",
+            "produce_pdf"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 85
+        },
+        {
+          "name": "render_html",
+          "params": [
+            "template_path",
+            "context",
+            "job_dir",
+            "job_name",
+            "produce_pdf"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 40
+        },
+        {
+          "name": "render_markdown",
+          "params": [
+            "template_path",
+            "context",
+            "job_dir",
+            "job_name",
+            "produce_pdf"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 52
+        },
+        {
+          "name": "parse_args",
+          "params": [
+            "argv"
+          ],
+          "returnType": "argparse.Namespace",
+          "exported": true,
+          "lineCount": 37
+        },
+        {
+          "name": "main",
+          "params": [
+            "argv"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "shutil",
+          "specifiers": [
+            "shutil"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        }
+      ],
+      "exports": [
+        "coerce_booleans",
+        "create_job_dir",
+        "validate_text",
+        "validate_docx",
+        "render_docx",
+        "render_html",
+        "render_markdown",
+        "parse_args",
+        "main"
+      ],
+      "totalLines": 394,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/renderer/SKILL.md": {
+      "filePath": "skills/coquill/renderer/SKILL.md",
+      "contentHash": "58eb866141af01a9f43663b54bf0c7b1fce44ade6d008a7eaa9c80f432dc520f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 134,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/SKILL.md": {
+      "filePath": "skills/coquill/SKILL.md",
+      "contentHash": "220f0e74ea36368404e41a3da9bde5571ceadcc1ecf961c4cf5c8fe480010da9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 318,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/templates/_examples/Bonterms_Mutual_NDA/Bonterms-Mutual-NDA.docx": {
+      "filePath": "skills/coquill/templates/_examples/Bonterms_Mutual_NDA/Bonterms-Mutual-NDA.docx",
+      "contentHash": "5a143068635c14d161d4e69f2298e77cb5497e50ae22acf4ec6d7674b0934dd6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": false
+    },
+    "skills/coquill/templates/_examples/Bonterms_Mutual_NDA/manifest.yaml": {
+      "filePath": "skills/coquill/templates/_examples/Bonterms_Mutual_NDA/manifest.yaml",
+      "contentHash": "773f487e5af348874bd9709c88bbe94a6796d2c2660b1d4bcc98e7c68742ebe0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/templates/_examples/Bonterms_Mutual_NDA/Readme.md": {
+      "filePath": "skills/coquill/templates/_examples/Bonterms_Mutual_NDA/Readme.md",
+      "contentHash": "8d186677eea60bfb378877d22d474cace3d1aff11f5475c810f6b33536a93195",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/templates/_examples/invoice/invoice.html": {
+      "filePath": "skills/coquill/templates/_examples/invoice/invoice.html",
+      "contentHash": "8f7b421a5be02267412f16359a2442ba1a7e1f252db3297aeeec74e7dcb3a021",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 133,
+      "hasStructuralAnalysis": false
+    },
+    "skills/coquill/templates/_examples/invoice/manifest.yaml": {
+      "filePath": "skills/coquill/templates/_examples/invoice/manifest.yaml",
+      "contentHash": "ea12d7934ca340b013b13b166930456da9ba5e59d337474e70d2377d52daa905",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/templates/_examples/meeting_notes/config.yaml": {
+      "filePath": "skills/coquill/templates/_examples/meeting_notes/config.yaml",
+      "contentHash": "697999b6a690a138edec1bf56c29053cef5b42e58c73aa3d4fa1eecc1a2bd3e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 120,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/templates/_examples/meeting_notes/manifest.yaml": {
+      "filePath": "skills/coquill/templates/_examples/meeting_notes/manifest.yaml",
+      "contentHash": "f0df28b0665f3a19e7e5fb0183f0eb384e9279b5f7e35f5a58fe15844bfff367",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 183,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/templates/_examples/meeting_notes/meeting_notes.md": {
+      "filePath": "skills/coquill/templates/_examples/meeting_notes/meeting_notes.md",
+      "contentHash": "487e34c50a18715d85e1e1d81bd4973d86fe0bac29bfd1b3fb5b180a6e844bbf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/transcriber/SKILL.md": {
+      "filePath": "skills/coquill/transcriber/SKILL.md",
+      "contentHash": "af549c62a332d528353aa1f5ac270d58ee01065835a38a4d1744dfd944bad4fd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 92,
+      "hasStructuralAnalysis": true
+    },
+    "skills/coquill/transcriber/transcribe.py": {
+      "filePath": "skills/coquill/transcriber/transcribe.py",
+      "contentHash": "2b666102d68002a972c0ff2cc16b1da63e46a54a371f8cb3fe8ee1b3bd102a33",
+      "functions": [
+        {
+          "name": "format_time",
+          "params": [
+            "iso_str"
+          ],
+          "returnType": "str | None",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "format_value",
+          "params": [
+            "value"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "get_variable_label",
+          "params": [
+            "manifest",
+            "var_name"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "has_conditionals",
+          "params": [
+            "manifest"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "derive_ended_at",
+          "params": [
+            "entries",
+            "cli_ended_at"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "build_header",
+          "params": [
+            "session_start",
+            "ended_at",
+            "output_files"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "build_interview",
+          "params": [
+            "entries",
+            "manifest"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 115
+        },
+        {
+          "name": "build_confirmed_values",
+          "params": [
+            "entries",
+            "manifest"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 107
+        },
+        {
+          "name": "build_footer",
+          "params": [
+            "ended_at"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "parse_args",
+          "params": [
+            "argv"
+          ],
+          "returnType": "argparse.Namespace",
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "main",
+          "params": [
+            "argv"
+          ],
+          "returnType": "None",
+          "exported": true,
+          "lineCount": 41
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "datetime",
+          "specifiers": [
+            "datetime"
+          ]
+        },
+        {
+          "source": "yaml",
+          "specifiers": [
+            "yaml"
+          ]
+        }
+      ],
+      "exports": [
+        "format_time",
+        "format_value",
+        "get_variable_label",
+        "has_conditionals",
+        "derive_ended_at",
+        "build_header",
+        "build_interview",
+        "build_confirmed_values",
+        "build_footer",
+        "parse_args",
+        "main"
+      ],
+      "totalLines": 450,
+      "hasStructuralAnalysis": true
+    },
+    "skills/corporate-registry-investigation/evals.yaml": {
+      "filePath": "skills/corporate-registry-investigation/evals.yaml",
+      "contentHash": "51303f9058daacbc68c43cfda30dda1f14730d542c7b677789ad79b4a9552e45",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "skills/corporate-registry-investigation/examples/output.md": {
+      "filePath": "skills/corporate-registry-investigation/examples/output.md",
+      "contentHash": "dae5eafc061d71cb609ce84b37ef86f7a3a0fb03e211a388b8a13285fd8bd99e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "skills/corporate-registry-investigation/README.md": {
+      "filePath": "skills/corporate-registry-investigation/README.md",
+      "contentHash": "499e62602cd8646a68b81cde96325048c27c134b4539de66ba8ab4fe246d6526",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "skills/corporate-registry-investigation/references/companies-house-investigation-model.md": {
+      "filePath": "skills/corporate-registry-investigation/references/companies-house-investigation-model.md",
+      "contentHash": "74e999004b0cea4de3318afd3e9da9c7c287189483c2583fab1eea3b7bac5205",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 135,
+      "hasStructuralAnalysis": true
+    },
+    "skills/corporate-registry-investigation/SKILL.md": {
+      "filePath": "skills/corporate-registry-investigation/SKILL.md",
+      "contentHash": "3cfffe35c164c4a3c239fc9217a8b68fd1f807615ebc27bcaf321abb9d5197de",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 161,
+      "hasStructuralAnalysis": true
+    },
+    "skills/customs-trade-law/SKILL.md": {
+      "filePath": "skills/customs-trade-law/SKILL.md",
+      "contentHash": "a97d66fa6e6f4a54f7662d11c7bc55a0b458c77bd93ba2abe4cb6f6b196ff031",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 167,
+      "hasStructuralAnalysis": true
+    },
+    "skills/dpa-checklist-review/examples/example_gdpr.md": {
+      "filePath": "skills/dpa-checklist-review/examples/example_gdpr.md",
+      "contentHash": "bd576a8705d22ba14cfb0a462e3b6463d4b064d860da553d08be4ebed5b2241f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 163,
+      "hasStructuralAnalysis": true
+    },
+    "skills/dpa-checklist-review/examples/example_us_state.md": {
+      "filePath": "skills/dpa-checklist-review/examples/example_us_state.md",
+      "contentHash": "f6e7f5bdb778688494e7fffdf12a03f9b710ced08952535751e07cf2c5642492",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 143,
+      "hasStructuralAnalysis": true
+    },
+    "skills/dpa-checklist-review/reference/gdpr_requirements.md": {
+      "filePath": "skills/dpa-checklist-review/reference/gdpr_requirements.md",
+      "contentHash": "6fd8058a1ffbca0fe59f4a449f06dd6da89e8d297f0ab6b1c74b188e7e7e287e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 241,
+      "hasStructuralAnalysis": true
+    },
+    "skills/dpa-checklist-review/reference/general_commercial_requirements.md": {
+      "filePath": "skills/dpa-checklist-review/reference/general_commercial_requirements.md",
+      "contentHash": "1f577c29fe6ea9a134c6df8454607d2254a236c6b945da4dc5689b88d1135953",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 151,
+      "hasStructuralAnalysis": true
+    },
+    "skills/dpa-checklist-review/reference/hipaa_baa_requirements.md": {
+      "filePath": "skills/dpa-checklist-review/reference/hipaa_baa_requirements.md",
+      "contentHash": "71ad47b8fe33e3f2b8fb21ee2d2eccd9ba97dd65440231fdf5324d4818cab048",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 222,
+      "hasStructuralAnalysis": true
+    },
+    "skills/dpa-checklist-review/reference/us_state_privacy_requirements.md": {
+      "filePath": "skills/dpa-checklist-review/reference/us_state_privacy_requirements.md",
+      "contentHash": "a6862593351934628cafc623c13c23f7eed16e8304bcc087a685160bfc34d78a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 241,
+      "hasStructuralAnalysis": true
+    },
+    "skills/dpa-checklist-review/SKILL.md": {
+      "filePath": "skills/dpa-checklist-review/SKILL.md",
+      "contentHash": "4dd9822f9a6aa2de21fd58b1706b9a97e87c8e53440b786cffc6bc8455f9e49c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 218,
+      "hasStructuralAnalysis": true
+    },
+    "skills/dpa-checklist-review/test-plan.md": {
+      "filePath": "skills/dpa-checklist-review/test-plan.md",
+      "contentHash": "6d696723b7306d51eb9c3d8fca18bfd75edb6be3dfaccd9570fd09ddb479889f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 198,
+      "hasStructuralAnalysis": true
+    },
+    "skills/enhance-prompt/examples/example_short_prompt.md": {
+      "filePath": "skills/enhance-prompt/examples/example_short_prompt.md",
+      "contentHash": "2b0addc5afb9a89cdda034a86c69f28556a87041c5e2b6d140217b06d4263dcf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 118,
+      "hasStructuralAnalysis": true
+    },
+    "skills/enhance-prompt/examples/example_skipped.md": {
+      "filePath": "skills/enhance-prompt/examples/example_skipped.md",
+      "contentHash": "e1203fbf31d07292d0065d1223131f6c9ec33f1dc22d884767e542b7d7513a1f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    "skills/enhance-prompt/examples/example_with_skill.md": {
+      "filePath": "skills/enhance-prompt/examples/example_with_skill.md",
+      "contentHash": "ce99f33c0feae84498674593a3767ac9b7a3f870d12115269841ced747885c0a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 104,
+      "hasStructuralAnalysis": true
+    },
+    "skills/enhance-prompt/reference/expansion_patterns.md": {
+      "filePath": "skills/enhance-prompt/reference/expansion_patterns.md",
+      "contentHash": "175a60d67527175be8b9d06e49082ba42241da16bbdfd949cc7566226eefcd9c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": true
+    },
+    "skills/enhance-prompt/reference/preserve_user_voice.md": {
+      "filePath": "skills/enhance-prompt/reference/preserve_user_voice.md",
+      "contentHash": "24758976d1032e96577b89d2910d516e40e2f6b5f496c7361274e3d50c5f8901",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": true
+    },
+    "skills/enhance-prompt/SKILL.md": {
+      "filePath": "skills/enhance-prompt/SKILL.md",
+      "contentHash": "50b39c40b0b47a750705548a8b446a8158ce4349261141c1f341254eb957ba90",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 169,
+      "hasStructuralAnalysis": true
+    },
+    "skills/enhance-prompt/test-plan.md": {
+      "filePath": "skills/enhance-prompt/test-plan.md",
+      "contentHash": "d72fee8b8003aebdca47787c579622129ce9a3f7a225609d94d795edb6f5b913",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 163,
+      "hasStructuralAnalysis": true
+    },
+    "skills/foreign-law-research/references/resources.md": {
+      "filePath": "skills/foreign-law-research/references/resources.md",
+      "contentHash": "8613c52e83054cabe167a1955320dab04cd3f784292c96d7119830d795e80ccd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 298,
+      "hasStructuralAnalysis": true
+    },
+    "skills/foreign-law-research/SKILL.md": {
+      "filePath": "skills/foreign-law-research/SKILL.md",
+      "contentHash": "1ceeea429383340c525e294e2fcf93c75aef473c1fedbc66aa0b6b539aa942a5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 292,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-claim-economics/evals.yaml": {
+      "filePath": "skills/legal-claim-economics/evals.yaml",
+      "contentHash": "0821e3ccbfcaf740db65cc1af2273b11bf698685081f69abf2481d14812e8696",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-claim-economics/examples/output.md": {
+      "filePath": "skills/legal-claim-economics/examples/output.md",
+      "contentHash": "50a24b46a5e810b4775e105998086d3d2a47776720f75c8f15d90907ba5051b4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-claim-economics/README.md": {
+      "filePath": "skills/legal-claim-economics/README.md",
+      "contentHash": "650710d247de54b9d6d9e03b3ad9ad42b454e42d09021b7e7a26c4eb6727d0b1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-claim-economics/references/engine-model.md": {
+      "filePath": "skills/legal-claim-economics/references/engine-model.md",
+      "contentHash": "a726d60d94fbc8140d006c83a07b9cf4194f046ebab9187b1c0079afac6b6824",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 181,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-claim-economics/SKILL.md": {
+      "filePath": "skills/legal-claim-economics/SKILL.md",
+      "contentHash": "44d84c0bd6bf256d16794a2b69c36d772fb6dceeed6b3f8bc1af00941af95cbf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 162,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-translation/README.md": {
+      "filePath": "skills/legal-translation/README.md",
+      "contentHash": "e94c714dc58bff95935cb78046bd230bd7170e889c0d9f53bba5050bdc2c3388",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 84,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-translation/references/document-type-library.md": {
+      "filePath": "skills/legal-translation/references/document-type-library.md",
+      "contentHash": "bedbe28ffb99918a8cb41636eb7843b11d7c18a06c89e826da8b52a56ae60a3c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 391,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-translation/references/legal-glossary.md": {
+      "filePath": "skills/legal-translation/references/legal-glossary.md",
+      "contentHash": "8b9f9339752da074d76e59ab9c27fd617ac8d13f28527252d49bbd368b69cc2c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 132,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-translation/references/legal-language-conventions.md": {
+      "filePath": "skills/legal-translation/references/legal-language-conventions.md",
+      "contentHash": "ceab2bfa06ac4116af0ad11e56215101956f3f4fa8c24247403cea5c9311770e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 349,
+      "hasStructuralAnalysis": true
+    },
+    "skills/legal-translation/SKILL.md": {
+      "filePath": "skills/legal-translation/SKILL.md",
+      "contentHash": "f2b7deaa1c5ca0318be286e8b2a4c9ad9a3c3d20bd64a034aa0e3371cbc5b2d5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 409,
+      "hasStructuralAnalysis": true
+    },
+    "skills/license-comply/SKILL.md": {
+      "filePath": "skills/license-comply/SKILL.md",
+      "contentHash": "f768da6a95a82d32d8f7ab465d669657017a42c75f58bf305ad310aea7d2f517",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 134,
+      "hasStructuralAnalysis": true
+    },
+    "skills/local-first-legal-workspace/evals.yaml": {
+      "filePath": "skills/local-first-legal-workspace/evals.yaml",
+      "contentHash": "1678c5ed99a4045ad02d8a33792f46d72ae0e544e2a339ae64f155c4dde31582",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "skills/local-first-legal-workspace/examples/output.md": {
+      "filePath": "skills/local-first-legal-workspace/examples/output.md",
+      "contentHash": "83ce720ea220f0cc6b65696f30cf7a97ecc36c8521dd332f7064a973964d1e13",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": true
+    },
+    "skills/local-first-legal-workspace/README.md": {
+      "filePath": "skills/local-first-legal-workspace/README.md",
+      "contentHash": "e9017039a9916e1e0fc643f3871c300385245a2d2a35d6a4ca6f6830485845ce",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "skills/local-first-legal-workspace/references/local-first-model.md": {
+      "filePath": "skills/local-first-legal-workspace/references/local-first-model.md",
+      "contentHash": "d2e9600674cb2549091a31464e49ad6ad19320d032aef5b2eca4363dfd8a25e7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 112,
+      "hasStructuralAnalysis": true
+    },
+    "skills/local-first-legal-workspace/SKILL.md": {
+      "filePath": "skills/local-first-legal-workspace/SKILL.md",
+      "contentHash": "dad3cc5f96dd33bd193a76b74f6fec0e3db20480ffea70a5a55de808ca5c1d54",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 155,
+      "hasStructuralAnalysis": true
+    },
+    "skills/lq-board-document-review/SKILL.md": {
+      "filePath": "skills/lq-board-document-review/SKILL.md",
+      "contentHash": "1b88b292b7cbdb704ed52e3240086a4308fd4f90f9c92386a0e42803b51bf534",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 119,
+      "hasStructuralAnalysis": true
+    },
+    "skills/lq-governance-playbook-benchmark/SKILL.md": {
+      "filePath": "skills/lq-governance-playbook-benchmark/SKILL.md",
+      "contentHash": "9aa0405c04d43e9a3fae14bb1b7b0fa5819d354702aad7721e60120e0e6da13a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 106,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-commercial-purchase/examples/example_buyer_review.md": {
+      "filePath": "skills/msa-review-commercial-purchase/examples/example_buyer_review.md",
+      "contentHash": "dd70ed5d1dd7d1bd5dcc01377f173e94e57f451ad5d9d0c3e3b10bd7d811e10a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 182,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-commercial-purchase/examples/example_supplier_review.md": {
+      "filePath": "skills/msa-review-commercial-purchase/examples/example_supplier_review.md",
+      "contentHash": "b0af570db89511b0467320ae1adae68dcf1a2a5d94187787a2f391a6599674bc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 270,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-commercial-purchase/reference/issue_checklist.md": {
+      "filePath": "skills/msa-review-commercial-purchase/reference/issue_checklist.md",
+      "contentHash": "2dd71c1f288f4f782e99efb50ceb2113b042588a62108e587d4862e9165e4393",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 333,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-commercial-purchase/reference/perspective_lens.md": {
+      "filePath": "skills/msa-review-commercial-purchase/reference/perspective_lens.md",
+      "contentHash": "8f46842fd9e05570580abe4d4c75c42fc64759f8456672777a45c114af5ebdf8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 155,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-commercial-purchase/reference/red_flags.md": {
+      "filePath": "skills/msa-review-commercial-purchase/reference/red_flags.md",
+      "contentHash": "6bb32a91191ac51a801ab26aa14bcd8fbda9245f2c03cbe3a04492edb397d9e6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 272,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-commercial-purchase/reference/severity_rubric.md": {
+      "filePath": "skills/msa-review-commercial-purchase/reference/severity_rubric.md",
+      "contentHash": "282a1ed800ac66450f017210b28d35203c00d3038644cc6873dba5a6eeb7f43e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-commercial-purchase/SKILL.md": {
+      "filePath": "skills/msa-review-commercial-purchase/SKILL.md",
+      "contentHash": "50d12045b7ac165fcb93b07b1a0d986a7d593a79cb2b4834633ad5a762f4bd88",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 257,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-commercial-purchase/test-plan.md": {
+      "filePath": "skills/msa-review-commercial-purchase/test-plan.md",
+      "contentHash": "066e884019c989cd32d5cfd203886e4e6196998395a5425d51397692b84930d0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 181,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-saas/examples/example_customer_review.md": {
+      "filePath": "skills/msa-review-saas/examples/example_customer_review.md",
+      "contentHash": "f184aecb4de294eec93203c13c547064e2f3934fd0a4d74335b7c18effa378fb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 218,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-saas/examples/example_vendor_review.md": {
+      "filePath": "skills/msa-review-saas/examples/example_vendor_review.md",
+      "contentHash": "01e0694d088940e8299597c818e6ce7bd7674980797f1587d1398bcaa53af9db",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 163,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-saas/reference/issue_checklist.md": {
+      "filePath": "skills/msa-review-saas/reference/issue_checklist.md",
+      "contentHash": "11f49e408a45abd910e83d9f5a649c2208b7155131ee656cfda819b962d173b5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 336,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-saas/reference/perspective_lens.md": {
+      "filePath": "skills/msa-review-saas/reference/perspective_lens.md",
+      "contentHash": "58420c465418cd681fc73293fdeb669c961d4abaa7ae8baca3429070df9da871",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 144,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-saas/reference/red_flags.md": {
+      "filePath": "skills/msa-review-saas/reference/red_flags.md",
+      "contentHash": "a23d8da80b45315f7bf7a3152eecc352a31cef8d19769f284eaa7d9cdd88a485",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 219,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-saas/reference/severity_rubric.md": {
+      "filePath": "skills/msa-review-saas/reference/severity_rubric.md",
+      "contentHash": "bfb42d6b172ec1ab2dcddefd20c152cd7c68661c5b20061f2deb5460ada3c51f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 80,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-saas/SKILL.md": {
+      "filePath": "skills/msa-review-saas/SKILL.md",
+      "contentHash": "58ef58570b6a7fb12783084cc631b529677916f55de206ef4e080baff4fcb241",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 258,
+      "hasStructuralAnalysis": true
+    },
+    "skills/msa-review-saas/test-plan.md": {
+      "filePath": "skills/msa-review-saas/test-plan.md",
+      "contentHash": "cc06b54cddbb6e26ad18b21570dc1e5dd8d7c096dfecb278d39cd0f851c4c5db",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 202,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nda-review/references/DURATION_SCOPE.md": {
+      "filePath": "skills/nda-review/references/DURATION_SCOPE.md",
+      "contentHash": "50e90cd5ef85ba3e9adb55b5c6a0070927cd144190d252a9f2fcb551e2316b5c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nda-review/references/KEY_CLAUSES.md": {
+      "filePath": "skills/nda-review/references/KEY_CLAUSES.md",
+      "contentHash": "01b318e1a249614fe4eb28a429c182c465e33617c645b0eade7a174d03b87a93",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 146,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nda-review/references/PARTY_OBLIGATIONS.md": {
+      "filePath": "skills/nda-review/references/PARTY_OBLIGATIONS.md",
+      "contentHash": "ae2d9ab27ac32abc7c926d11069a0f30aa0d6faa7fedefc0afe19169b53167a6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nda-review/references/REMEDIES_LIABILITY.md": {
+      "filePath": "skills/nda-review/references/REMEDIES_LIABILITY.md",
+      "contentHash": "27cc79778891e7f8fe2b20866609b93cfebaa113875e3cbb6e14ca342afd4003",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 124,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nda-review/references/STANDARD_EXCEPTIONS.md": {
+      "filePath": "skills/nda-review/references/STANDARD_EXCEPTIONS.md",
+      "contentHash": "222249c251aa870f04c82965daf4d50a77b2f9ada11d559830b31e0acfc2f34e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 63,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nda-review/SKILL.md": {
+      "filePath": "skills/nda-review/SKILL.md",
+      "contentHash": "6697c565673492e0dd683be10ae1e225a1a429e02224310d39f497610ccd8ddd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 180,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/README.md": {
+      "filePath": "skills/nist-ai-rmf/README.md",
+      "contentHash": "b3998b859c1a442e5bb2e14a60d6bc4d3d2848d71318f920049b05c60b2c0959",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/core/functions.md": {
+      "filePath": "skills/nist-ai-rmf/references/core/functions.md",
+      "contentHash": "961a351031836a95d0acd1c8bb4c6984836eac3b3a8140a3173a940deed5ee4c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 22,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/core/glossary.md": {
+      "filePath": "skills/nist-ai-rmf/references/core/glossary.md",
+      "contentHash": "3acee7f7b48c99fffb85eaaa163094a202554ac21303a242693d189139ddddb7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/core/govern.md": {
+      "filePath": "skills/nist-ai-rmf/references/core/govern.md",
+      "contentHash": "6c32a44fa4d1871a86fc4906e2eaa5379cdfd94016d981d9dadb0d4d55b4cc1c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/core/manage.md": {
+      "filePath": "skills/nist-ai-rmf/references/core/manage.md",
+      "contentHash": "c9f23bd7e230cc4a059996142b9a40136c6d2aaf6d5c40f8db2885b2a4b2de75",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/core/map.md": {
+      "filePath": "skills/nist-ai-rmf/references/core/map.md",
+      "contentHash": "bf9ad5bca0dfd4f771585b90fbf2d43ab9213dec7db5abb65a121da3a771a8c7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/core/measure.md": {
+      "filePath": "skills/nist-ai-rmf/references/core/measure.md",
+      "contentHash": "d2551dc0b1a0be2fbad0d2a71e88cb81f783265cd32317cfdc9ec0a9ae74d818",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 49,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/core/trustworthy-characteristics.md": {
+      "filePath": "skills/nist-ai-rmf/references/core/trustworthy-characteristics.md",
+      "contentHash": "2eec870805e160c80e3981a1734feda9ce01a38a44dac113fa45ecef399bbf41",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 86,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/crosswalk.md": {
+      "filePath": "skills/nist-ai-rmf/references/crosswalk.md",
+      "contentHash": "254c218c89fe0779a3d9ece8f964f90cd93cca57e60e0bb4aa483cfaaa971bfb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/gai-profile/actions-govern.md": {
+      "filePath": "skills/nist-ai-rmf/references/gai-profile/actions-govern.md",
+      "contentHash": "75bed89ea9d71e2fa0bd1b61f04bff90b8c310865b8f9425d65bd1d8946f8787",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 166,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/gai-profile/actions-manage.md": {
+      "filePath": "skills/nist-ai-rmf/references/gai-profile/actions-manage.md",
+      "contentHash": "0ae07bf0a24563017ca18bed1fee35b7981c4cb215bb339cb7c5d6d3ade1c1cf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 112,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/gai-profile/actions-map.md": {
+      "filePath": "skills/nist-ai-rmf/references/gai-profile/actions-map.md",
+      "contentHash": "0284d8344c44d3226d4f5e745f47f7e92e2790751d7680f0b405bae06a3fbabe",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 108,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/gai-profile/actions-measure.md": {
+      "filePath": "skills/nist-ai-rmf/references/gai-profile/actions-measure.md",
+      "contentHash": "5d3cb5e38fdd204a794dcd006cae4a8805d2c3273ae223746662cf03035cc3cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 190,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/gai-profile/glossary.md": {
+      "filePath": "skills/nist-ai-rmf/references/gai-profile/glossary.md",
+      "contentHash": "b001b6335e37da98d3bc4ecf7e8c7ae4cff3ea32e7fb63dab3de3e4cd417c463",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 370,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/gai-profile/risks.md": {
+      "filePath": "skills/nist-ai-rmf/references/gai-profile/risks.md",
+      "contentHash": "d51fa1abd22b361188cf523c9b4f7088a34a796d0c3f747df35aad6cc8ff0025",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 167,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/README.md": {
+      "filePath": "skills/nist-ai-rmf/references/README.md",
+      "contentHash": "9469e8b89c66429714c48fdfa96e6000f1d5863cb0b492fbbaabea2194fbf2b0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/templates/assessment.md": {
+      "filePath": "skills/nist-ai-rmf/references/templates/assessment.md",
+      "contentHash": "f16619b15b39d761e4d24780c31b34644a9409477385dc7da70a33304255593f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 70,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/templates/consult.md": {
+      "filePath": "skills/nist-ai-rmf/references/templates/consult.md",
+      "contentHash": "0006f75d568fd3d657f3d0dab4a70dd7d31062592a6f435fe8a7b3998274e518",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/references/templates/governance-plan.md": {
+      "filePath": "skills/nist-ai-rmf/references/templates/governance-plan.md",
+      "contentHash": "abb0cb98970f48d9afc43db0216ca5485792173d369b8a44c50180d678c16ff1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "skills/nist-ai-rmf/SKILL.md": {
+      "filePath": "skills/nist-ai-rmf/SKILL.md",
+      "contentHash": "6f81b593337f6c31dbeefc267b3933ddd4db94557497cd06e6408dae33dbe153",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 159,
+      "hasStructuralAnalysis": true
+    },
+    "skills/office-word-diff/SKILL.md": {
+      "filePath": "skills/office-word-diff/SKILL.md",
+      "contentHash": "f3221afd07a43fb131a0737a130fc7bc6680d4abae30224dcc4e50c589de1bec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 95,
+      "hasStructuralAnalysis": true
+    },
+    "skills/proposition-checking/evals.yaml": {
+      "filePath": "skills/proposition-checking/evals.yaml",
+      "contentHash": "00132881f1de2761a033d71f580e0170d5b8aeec05c0736ab0fa4f6a81556588",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "skills/proposition-checking/examples/output.md": {
+      "filePath": "skills/proposition-checking/examples/output.md",
+      "contentHash": "d03c9a0053d40f140c20b14ab33673e0ebacb1efe35091ab11588b61615f9014",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "skills/proposition-checking/README.md": {
+      "filePath": "skills/proposition-checking/README.md",
+      "contentHash": "152c2d9af4095d007eb555a0b56239d3e56bbd41607a10dfaa0c29d6243a33e5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "skills/proposition-checking/references/proposition-checking-model.md": {
+      "filePath": "skills/proposition-checking/references/proposition-checking-model.md",
+      "contentHash": "e42b8145e727028275579bb2be597dd006389505227378bfe827695dcd986b4a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 88,
+      "hasStructuralAnalysis": true
+    },
+    "skills/proposition-checking/SKILL.md": {
+      "filePath": "skills/proposition-checking/SKILL.md",
+      "contentHash": "b50864876673481e34faa0571aa79028a8d4d0c5d00afeed9c4a3a1c88a43daa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 144,
+      "hasStructuralAnalysis": true
+    },
+    "skills/redlines/SKILL.md": {
+      "filePath": "skills/redlines/SKILL.md",
+      "contentHash": "e2ce283dd730466e294791296941a2810c1f41f3664758a0c2a099d9b47001fb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 106,
+      "hasStructuralAnalysis": true
+    },
+    "skills/sgcite/SKILL.md": {
+      "filePath": "skills/sgcite/SKILL.md",
+      "contentHash": "c014aad4434e6df6a353a748af016a8f70e6c8ef2d7c7a974f5c37270d878980",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": true
+    },
+    "skills/skill-creator/examples/example_session.md": {
+      "filePath": "skills/skill-creator/examples/example_session.md",
+      "contentHash": "349798b7bdf74d7608f12a156568d5db5cff1a9749bcc698d6dd4c8a6087c091",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 268,
+      "hasStructuralAnalysis": true
+    },
+    "skills/skill-creator/reference/description_field.md": {
+      "filePath": "skills/skill-creator/reference/description_field.md",
+      "contentHash": "e91e0089af75ec2b41f01bffa4a2197b2706a07003a9cfd220b798fbcf270a55",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": true
+    },
+    "skills/skill-creator/reference/self_improvement.md": {
+      "filePath": "skills/skill-creator/reference/self_improvement.md",
+      "contentHash": "ee1307259339cb185bda79202b5ae983ea42539866226496a8d63c841db45436",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "skills/skill-creator/reference/wizard_mode.md": {
+      "filePath": "skills/skill-creator/reference/wizard_mode.md",
+      "contentHash": "4b8acfb59969bcc3f9d8fd7e80f5ca4021b05df15c9c69a1bcc70d5f2817beac",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 89,
+      "hasStructuralAnalysis": true
+    },
+    "skills/skill-creator/SKILL.md": {
+      "filePath": "skills/skill-creator/SKILL.md",
+      "contentHash": "54e691bbfb3720873f104ae8518e22021824a08380c4cd4e3fbb921d4b9cb643",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 197,
+      "hasStructuralAnalysis": true
+    },
+    "skills/skill-creator/test-plan.md": {
+      "filePath": "skills/skill-creator/test-plan.md",
+      "contentHash": "190361c0fffaa6547186e586c0be37cb78a5b038dec819008591ed64e9a4ac5d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 171,
+      "hasStructuralAnalysis": true
+    },
+    "skills/statutory-analysis/CHANGELOG.md": {
+      "filePath": "skills/statutory-analysis/CHANGELOG.md",
+      "contentHash": "e03bef67f1b9c5140ebc05ced9054e4d2346197f72b8256b3110f815655eecdc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "skills/statutory-analysis/references/canons_of_construction.md": {
+      "filePath": "skills/statutory-analysis/references/canons_of_construction.md",
+      "contentHash": "7754343f663bc28652697a1e9366d1ecdeb9804ce9f28d708d449e0097e9ea90",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 215,
+      "hasStructuralAnalysis": true
+    },
+    "skills/statutory-analysis/references/index.md": {
+      "filePath": "skills/statutory-analysis/references/index.md",
+      "contentHash": "a6d942072e8185bf433e583736c38d7f0f8494f996e48244fc3a16284a3312d6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "skills/statutory-analysis/references/practical_lessons.md": {
+      "filePath": "skills/statutory-analysis/references/practical_lessons.md",
+      "contentHash": "d1e804101f24248608481c26c843713d21f240da39ebfb38f0e9017b94982708",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 301,
+      "hasStructuralAnalysis": true
+    },
+    "skills/statutory-analysis/references/statutory_structure.md": {
+      "filePath": "skills/statutory-analysis/references/statutory_structure.md",
+      "contentHash": "30ca69b535f347e1accbecec02394661866a0801df191907acfda271724d62c2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 274,
+      "hasStructuralAnalysis": true
+    },
+    "skills/statutory-analysis/SKILL.md": {
+      "filePath": "skills/statutory-analysis/SKILL.md",
+      "contentHash": "94f17e5e64997e25761cf352eb8bc8db60af12c7d1d221bc9cee802079beca5d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 468,
+      "hasStructuralAnalysis": true
+    },
+    "skills/superdoc-redlines/SKILL.md": {
+      "filePath": "skills/superdoc-redlines/SKILL.md",
+      "contentHash": "d2e7e41e321e9177ec8755cbe87430c78e20c63263c80c1d722f4c2ddee382c6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 106,
+      "hasStructuralAnalysis": true
+    },
+    "skills/text-provenance/SKILL.md": {
+      "filePath": "skills/text-provenance/SKILL.md",
+      "contentHash": "df06a98add23f648f90fa1f252c265c8f41e00b8ba9750232986d8cee81e71fa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-citation-verification/evals.yaml": {
+      "filePath": "skills/uk-citation-verification/evals.yaml",
+      "contentHash": "1d31e6769da9a7690c476c3d847364d7ea37b47ebd0cc71320673aa74d1226a7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-citation-verification/examples/output.md": {
+      "filePath": "skills/uk-citation-verification/examples/output.md",
+      "contentHash": "660ee54e2979a9ebdb1f8da1070e77365a639f4b5e1671239d58846ffd515631",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 73,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-citation-verification/README.md": {
+      "filePath": "skills/uk-citation-verification/README.md",
+      "contentHash": "ab4dfe4b9c1b03b27968aa771a1d54ca58fdced0a9c94565308cd5fa984919e0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-citation-verification/references/citation-resolution-model.md": {
+      "filePath": "skills/uk-citation-verification/references/citation-resolution-model.md",
+      "contentHash": "518e8249d91cc9fe52267ea9cde3df2d3835310a1127a38afe61adeb52ee0265",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 84,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-citation-verification/SKILL.md": {
+      "filePath": "skills/uk-citation-verification/SKILL.md",
+      "contentHash": "8565a84c614ef5ed3d38435a81ca520c2fc4c5c73cc6bfd472f49eb883bc392a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 144,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-court-of-appeal-judicial-preference-check/evals.yaml": {
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/evals.yaml",
+      "contentHash": "61e9d616ed8e9b4e7816bab24370c2e1f5934cb4fad91c97c6c89cf61af60126",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-court-of-appeal-judicial-preference-check/examples/output.md": {
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/examples/output.md",
+      "contentHash": "6c1353fe307f1dcc112615e259306fd444490ec846db1888d5e061f60d221f8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 115,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-court-of-appeal-judicial-preference-check/README.md": {
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/README.md",
+      "contentHash": "2769c295ad1bf0fc59c4595896bf01b32f5dd8300421d3ac597e565a603f39c8",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-court-of-appeal-judicial-preference-check/references/appellate-preference-model.md": {
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/references/appellate-preference-model.md",
+      "contentHash": "13d15beb839c66d7ee15f7f9b2d4cf819418f830d8a872d2333d027990dce0b2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-court-of-appeal-judicial-preference-check/SKILL.md": {
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/SKILL.md",
+      "contentHash": "d9297bc9bc6d984fd756c0ca735050b87e1200bb541c2f90cf29c8999f12f0fd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 240,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-disclosure-list-review/evals.yaml": {
+      "filePath": "skills/uk-disclosure-list-review/evals.yaml",
+      "contentHash": "eaa5f6302dd5e645647ad3cd6382f1c8defd5e71c2e2031d3224658295f14112",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-disclosure-list-review/examples/output.md": {
+      "filePath": "skills/uk-disclosure-list-review/examples/output.md",
+      "contentHash": "b0a0697a5803e2411eae03dab6dd12fcf86b9baf4c041e9cd1b61e0b2f2d7d45",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-disclosure-list-review/README.md": {
+      "filePath": "skills/uk-disclosure-list-review/README.md",
+      "contentHash": "b176f4392ba258d0d0861e72c17e592811c768c1b363e368b3345846541e012f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-disclosure-list-review/references/disclosure-review-playbook.md": {
+      "filePath": "skills/uk-disclosure-list-review/references/disclosure-review-playbook.md",
+      "contentHash": "5b2c2f37b174d06068517fc73faa8b35c2e100ad663a6cd5b0ecaade2fb167c2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 71,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-disclosure-list-review/SKILL.md": {
+      "filePath": "skills/uk-disclosure-list-review/SKILL.md",
+      "contentHash": "883244657300dd59f0d004404a770eb5c4cb434e986bfc5f0f9f817df96f94bd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 156,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-particulars-of-claim-review/evals.yaml": {
+      "filePath": "skills/uk-particulars-of-claim-review/evals.yaml",
+      "contentHash": "4bd51a8ed067160da533001b7595a1ce6a569f97b3f9a466d308f330b309ab33",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-particulars-of-claim-review/examples/output.md": {
+      "filePath": "skills/uk-particulars-of-claim-review/examples/output.md",
+      "contentHash": "0a58caa5f53ed0998e6ec40981e347ff31eab98f1d4f6697f3e2da9dfb91dec4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-particulars-of-claim-review/README.md": {
+      "filePath": "skills/uk-particulars-of-claim-review/README.md",
+      "contentHash": "98e5d32288e31f82d2de7790c59d3602f1b6ca977c5a94b51da6acf2d5f13e49",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-particulars-of-claim-review/references/pleading-review-playbook.md": {
+      "filePath": "skills/uk-particulars-of-claim-review/references/pleading-review-playbook.md",
+      "contentHash": "a14c59d1974ad28908b2f19cf785b73ad0a280e6140ba405e28b986d556c0132",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-particulars-of-claim-review/SKILL.md": {
+      "filePath": "skills/uk-particulars-of-claim-review/SKILL.md",
+      "contentHash": "120fdc0be9bf0c19e24f81781e062cdd14ae3807677136cd3fdc8b2c537f50f3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 137,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-witness-statement-review/evals.yaml": {
+      "filePath": "skills/uk-witness-statement-review/evals.yaml",
+      "contentHash": "63262a2766320ced5157400a5d5f34df72635d86c19ace285fadcba0f62e13a4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-witness-statement-review/examples/output.md": {
+      "filePath": "skills/uk-witness-statement-review/examples/output.md",
+      "contentHash": "ce238edbf187522b6ade546743ca9cf32263ee627dc9775ab6f61c99e105df32",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-witness-statement-review/README.md": {
+      "filePath": "skills/uk-witness-statement-review/README.md",
+      "contentHash": "e75c693abca09f54615a0062a7517157f15b86da47ffd7ea760c87c85fd0289f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-witness-statement-review/references/witness-review-playbook.md": {
+      "filePath": "skills/uk-witness-statement-review/references/witness-review-playbook.md",
+      "contentHash": "68f9c53ba659b52b63336d65076e5ad56e6b5139cfb99cd113a2ab6797e5eb12",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": true
+    },
+    "skills/uk-witness-statement-review/SKILL.md": {
+      "filePath": "skills/uk-witness-statement-review/SKILL.md",
+      "contentHash": "6797c07e59c93047dcd8c72d18f0f09124735018e5b74bedac293e2ca6660579",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 149,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/assets/applicability-questions.json": {
+      "filePath": "skills/us-state-privacy-navigator/assets/applicability-questions.json",
+      "contentHash": "1f575c580c2db31621c6f86753cd925e770942c9857ab17af31486fc530f3af1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 247,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/assets/memo-template.md": {
+      "filePath": "skills/us-state-privacy-navigator/assets/memo-template.md",
+      "contentHash": "150b4a3c6cadb49cfcf1ab5e8cae9b0a73a8ace3f222afa8402441bf218511d1",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 172,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/assets/notice-clauses/financial-incentive.md": {
+      "filePath": "skills/us-state-privacy-navigator/assets/notice-clauses/financial-incentive.md",
+      "contentHash": "ae596b373237b4a526202ddb2659af569861e182780550df4cfd22feee954540",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/assets/notice-clauses/notice-at-collection.md": {
+      "filePath": "skills/us-state-privacy-navigator/assets/notice-clauses/notice-at-collection.md",
+      "contentHash": "507fff472c0d7fa83e569b974adba68788d1a2960129f500b5658ef52bdd2fe6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 87,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/assets/notice-clauses/opt-out-disclosures.md": {
+      "filePath": "skills/us-state-privacy-navigator/assets/notice-clauses/opt-out-disclosures.md",
+      "contentHash": "2d14d0251ccad9edbf1594e21850b393197059b426012aaa73e19af0e31afd16",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 83,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/assets/notice-clauses/sensitive-data-notice.md": {
+      "filePath": "skills/us-state-privacy-navigator/assets/notice-clauses/sensitive-data-notice.md",
+      "contentHash": "19fad8792f85a7edf5a6b364a75efff4c9ca91226c74fe22c2888720db998dbb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 123,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/README.md": {
+      "filePath": "skills/us-state-privacy-navigator/README.md",
+      "contentHash": "7f61871f7499818fcace7376ed387e03a8aca15ee487d86d11882ed66ba42970",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 233,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/ag-priorities.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/ag-priorities.md",
+      "contentHash": "1b18b5e78cbd7269afbcb000207bfda5c61366e0ff8886301a07924ac1213506",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 240,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/applicability-matrix.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/applicability-matrix.md",
+      "contentHash": "0e6137ff55bd771b7b244858f01203a670c4dab7b670d5d8d3e2090de5468b67",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/controller-duties.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/controller-duties.md",
+      "contentHash": "39576160da8af15d9fdcaea9a744f994e90c64c1c4180c653dd64b4e49269576",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 133,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/defense-arguments.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/defense-arguments.md",
+      "contentHash": "ccd71351d7bdeaf1c1f0cd2310973594f01f03c6b5dc89982bbf7bb780172040",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 397,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/enforcement_actions.json": {
+      "filePath": "skills/us-state-privacy-navigator/references/enforcement_actions.json",
+      "contentHash": "9d8b0c0794752bf243bfcd20d0eb9f71101f56b99f2a13a9fdd89d8cb0ec36f2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3082,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/enforcement.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/enforcement.md",
+      "contentHash": "888d4b5a9fc12a65353bd87ef2a376054fadd98d50252faf0ca695a564e69aad",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 181,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/federal-overlays.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/federal-overlays.md",
+      "contentHash": "eb79c4117ba1ecbac043b5f76f7da261af70213ffa20e98ea70b716191ecfe11",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 203,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/kids-and-teens.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/kids-and-teens.md",
+      "contentHash": "7739cd8f56b42ad78915c65f5f5a75c11faaf482aec37af31fc9f25a270bca3a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 135,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/rights-comparison.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/rights-comparison.md",
+      "contentHash": "9c03a3b0290bbfcc7647ce8ed6f3fc40d4720339e9f7a4aede6f2db8333ca345",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 128,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/sensitive-data.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/sensitive-data.md",
+      "contentHash": "6c670bb169877e3687b8ccdba68306a669fefc1f1217f89fe58bbfba95ee0099",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 123,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/ca.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/ca.md",
+      "contentHash": "ba089129c73ace0660cd28e3d66ed3f7d638f213fc7b6f3b9bc533b9e870404f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 140,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/co.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/co.md",
+      "contentHash": "c27b23c71474bf19d5d083de888174f27f4746aa6370d566ffb28e1fef1bcd78",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/ct.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/ct.md",
+      "contentHash": "ea10c8a32431747658de7c39cc2d477c397c0305e6a169fa719eb90d205b606f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 57,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/de.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/de.md",
+      "contentHash": "699f5a0d0a540bf6c113e4d7a351b621e357601d1a1826262cd978e8dd12c62f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/fl.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/fl.md",
+      "contentHash": "dcebd0f3db11119e850b52b94efdd1a94bcdffa5516cee6f211df38eb00e87f5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/ia.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/ia.md",
+      "contentHash": "f81b25395342ef79eb316c38faac34db3ba38c647f6389c5bd534e113bd9651d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/in.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/in.md",
+      "contentHash": "7c89f5fa108d73ed17ba36ff36fbe71b8cd902dc84762a0e8310b7a099325197",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/ky.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/ky.md",
+      "contentHash": "4e6b82d619d2411fb368adbc89eec728cd88f6b3111f7c409d6445d5b457734c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/md.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/md.md",
+      "contentHash": "c975d9110d6d3d6cb3cecfbf037ba5c3c11eed2c93396778dca8c7a64f4033ed",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/mn.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/mn.md",
+      "contentHash": "869e16f46c90e2d3c1993b31e22daf61343b84f8b1192114365e61e4380e6697",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/mt.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/mt.md",
+      "contentHash": "01012a60d647497891bac4617eaea41cc49de20ead47925b45d3d34d1fab4010",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/ne.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/ne.md",
+      "contentHash": "4e9b360ff23c1945ce71db3bf3366b259e6388d710ddd66b29d6e0d75443d9d0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/nh.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/nh.md",
+      "contentHash": "31fd13ae9aaa06ba1b5c6461c250a4f7e841ac612690aecc64084b5e47154f2c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/nj.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/nj.md",
+      "contentHash": "4bd5f89e8ac461f1a72399651602fcb43b95d28d01970ce192dc46340873d2df",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/or.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/or.md",
+      "contentHash": "548dac092368323203528e3e25a4d7bac7a6e15b42878fa6606e245cbd8eb4d6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/ri.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/ri.md",
+      "contentHash": "f8d64c4c84fe6721fae00a11f4a234ff5eb86b37a24ddd3ecfbd858033bd30f9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/tn.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/tn.md",
+      "contentHash": "2d9633a35c3d0f9e2d157619980431ea22d41308698d2a0be9edc94b43430a77",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 50,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/tx.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/tx.md",
+      "contentHash": "74b2b51b5b35f34e6a98ec630bb89cc5c731192efdbaa9890bce5b2f2d6c6296",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/ut.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/ut.md",
+      "contentHash": "ac25dd92a36e7fe971381dd78381880bc5059b3478ec0952c76b5f325495a58b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 54,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/states/va.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/states/va.md",
+      "contentHash": "8ee30eaa520a9a5f775697185ab165b55a3380bbd40ee41d50f7df071f684e8f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 57,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/universal-opt-out.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/universal-opt-out.md",
+      "contentHash": "879386ec59580be04e243eb961d35ca4ee56ddeb80112ccb9b6d2a73380322ec",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 95,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/workflows/dsar-routing.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/workflows/dsar-routing.md",
+      "contentHash": "85eef6b266cf280160695b0d33e02cc320f1c6ece2e12c6d19f54ecec2524d4e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 198,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/workflows/gap-analysis-method.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/workflows/gap-analysis-method.md",
+      "contentHash": "67e9bd806cdf220a6aba78bf2e51417833093b156acbcd5ebe343a94b9c79712",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 132,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/workflows/intake-questionnaire.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/workflows/intake-questionnaire.md",
+      "contentHash": "7675f55f4507ff894840f2d2ea3a15d58f6d175a7f7d7e4b0d5b987f4ba0c7cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 79,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/references/workflows/status-determination.md": {
+      "filePath": "skills/us-state-privacy-navigator/references/workflows/status-determination.md",
+      "contentHash": "bfcc525d8a5b32618fc6598bd97555e79913731846efbdbc2d3b7cccf416a3ab",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 216,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/scripts/applicability_check.py": {
+      "filePath": "skills/us-state-privacy-navigator/scripts/applicability_check.py",
+      "contentHash": "d49b5f8121e446200c9261e4575585981c2ce40306208f092ed7b41cb100944a",
+      "functions": [
+        {
+          "name": "get_state_count",
+          "params": [
+            "intake",
+            "state_code"
+          ],
+          "returnType": "Optional[int]",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "revenue",
+          "params": [
+            "intake"
+          ],
+          "returnType": "Optional[float]",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "percent_revenue_from_sale",
+          "params": [
+            "intake"
+          ],
+          "returnType": "Optional[float]",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "sells",
+          "params": [
+            "intake"
+          ],
+          "returnType": "Optional[bool]",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "any_sale_revenue",
+          "params": [
+            "intake"
+          ],
+          "returnType": "Optional[bool]",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "sectoral_entity_exempt",
+          "params": [
+            "intake",
+            "state_code"
+          ],
+          "returnType": "tuple[bool, str]",
+          "exported": true,
+          "lineCount": 23
+        },
+        {
+          "name": "test_ca",
+          "params": [
+            "intake"
+          ],
+          "returnType": "StateResult",
+          "exported": true,
+          "lineCount": 59
+        },
+        {
+          "name": "_two_tier_test",
+          "params": [
+            "intake",
+            "state_code",
+            "statute",
+            "effective",
+            "primary_threshold",
+            "secondary_threshold",
+            "secondary_pct_threshold",
+            "use_any_sale_revenue",
+            "revenue_floor"
+          ],
+          "returnType": "StateResult",
+          "exported": true,
+          "lineCount": 113
+        },
+        {
+          "name": "test_va",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_co",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_ct",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_ut",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_or",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_mt",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_ia",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_in",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_tn",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_de",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_nj",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_nh",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_ky",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_md",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_mn",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_ri",
+          "params": [
+            "intake"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "test_tx",
+          "params": [
+            "intake"
+          ],
+          "returnType": "StateResult",
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "test_ne",
+          "params": [
+            "intake"
+          ],
+          "returnType": "StateResult",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "_sba_test",
+          "params": [
+            "intake",
+            "state_code",
+            "statute",
+            "effective"
+          ],
+          "returnType": "StateResult",
+          "exported": true,
+          "lineCount": 54
+        },
+        {
+          "name": "test_fl",
+          "params": [
+            "intake"
+          ],
+          "returnType": "StateResult",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "run",
+          "params": [
+            "intake"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "Verdict",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "StateResult",
+          "methods": [],
+          "properties": [
+            "state",
+            "statute",
+            "effective",
+            "verdict",
+            "reasoning",
+            "needed_inputs"
+          ],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass",
+            "field",
+            "asdict"
+          ]
+        },
+        {
+          "source": "enum",
+          "specifiers": [
+            "Enum"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Optional"
+          ]
+        }
+      ],
+      "exports": [
+        "Verdict",
+        "StateResult",
+        "get_state_count",
+        "revenue",
+        "percent_revenue_from_sale",
+        "sells",
+        "any_sale_revenue",
+        "sectoral_entity_exempt",
+        "test_ca",
+        "_two_tier_test",
+        "test_va",
+        "test_co",
+        "test_ct",
+        "test_ut",
+        "test_or",
+        "test_mt",
+        "test_ia",
+        "test_in",
+        "test_tn",
+        "test_de",
+        "test_nj",
+        "test_nh",
+        "test_ky",
+        "test_md",
+        "test_mn",
+        "test_ri",
+        "test_tx",
+        "test_ne",
+        "_sba_test",
+        "test_fl",
+        "run",
+        "main"
+      ],
+      "totalLines": 444,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/scripts/citation_audit.py": {
+      "filePath": "skills/us-state-privacy-navigator/scripts/citation_audit.py",
+      "contentHash": "773d428c5c3f15452b451297ac96635e337dba13b909f90a5cff6b873b987266",
+      "functions": [
+        {
+          "name": "section_exists_check",
+          "params": [
+            "citation_text"
+          ],
+          "returnType": "tuple[bool, str]",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "split_sentences",
+          "params": [
+            "text"
+          ],
+          "returnType": "list[tuple[int, str]]",
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "has_citation",
+          "params": [
+            "sentence"
+          ],
+          "returnType": "tuple[bool, list[str]]",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "audit_text",
+          "params": [
+            "text"
+          ],
+          "returnType": "list[Finding]",
+          "exported": true,
+          "lineCount": 58
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 47
+        }
+      ],
+      "classes": [
+        {
+          "name": "Finding",
+          "methods": [],
+          "properties": [
+            "severity",
+            "line_number",
+            "message",
+            "excerpt",
+            "suggestion"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass",
+            "field",
+            "asdict"
+          ]
+        }
+      ],
+      "exports": [
+        "Finding",
+        "section_exists_check",
+        "split_sentences",
+        "has_citation",
+        "audit_text",
+        "main"
+      ],
+      "totalLines": 365,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/scripts/conflict_resolver.py": {
+      "filePath": "skills/us-state-privacy-navigator/scripts/conflict_resolver.py",
+      "contentHash": "f6d78689b90aa96fff046d3fbd6a9b388d9d6f75824ad62cde1cb651f69afe7b",
+      "functions": [
+        {
+          "name": "synthesize",
+          "params": [
+            "applicable_states",
+            "dimension_filter"
+          ],
+          "returnType": "list[CeilingFinding]",
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "render_text",
+          "params": [
+            "findings"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 39
+        }
+      ],
+      "classes": [
+        {
+          "name": "CeilingFinding",
+          "methods": [],
+          "properties": [
+            "dimension",
+            "category",
+            "description",
+            "binding_rule",
+            "controlling_state",
+            "binding_citation",
+            "other_states",
+            "implementation_guidance",
+            "true_conflict",
+            "note"
+          ],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "dataclasses",
+          "specifiers": [
+            "dataclass",
+            "asdict",
+            "field"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        }
+      ],
+      "exports": [
+        "CeilingFinding",
+        "synthesize",
+        "render_text",
+        "main"
+      ],
+      "totalLines": 456,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/scripts/generate_docx_memo.js": {
+      "filePath": "skills/us-state-privacy-navigator/scripts/generate_docx_memo.js",
+      "contentHash": "5429b1dfba20076b845c9b08c44682ff0451c2b15d959063a61813539c6f1aeb",
+      "functions": [
+        {
+          "name": "parseArgs",
+          "params": [],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "p",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "bullet",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "heading",
+          "params": [
+            "text",
+            "level"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "cell",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 14
+        },
+        {
+          "name": "table",
+          "params": [
+            "rows",
+            "columnWidths"
+          ],
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "buildEntityProfileTable",
+          "params": [
+            "profile"
+          ],
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "buildApplicabilityTable",
+          "params": [
+            "rows"
+          ],
+          "exported": false,
+          "lineCount": 29
+        },
+        {
+          "name": "buildStatusTable",
+          "params": [
+            "rows"
+          ],
+          "exported": false,
+          "lineCount": 21
+        },
+        {
+          "name": "buildGapTable",
+          "params": [
+            "rows"
+          ],
+          "exported": false,
+          "lineCount": 38
+        },
+        {
+          "name": "buildDoc",
+          "params": [
+            "memo"
+          ],
+          "exported": false,
+          "lineCount": 197
+        },
+        {
+          "name": "main",
+          "params": [],
+          "exported": false,
+          "lineCount": 15
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 459,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/scripts/precedent_match.py": {
+      "filePath": "skills/us-state-privacy-navigator/scripts/precedent_match.py",
+      "contentHash": "7d6bc542bf324e7673761ccd51fd1024cff0687785508c525877d7c347f33673",
+      "functions": [
+        {
+          "name": "load_corpus",
+          "params": [
+            "path"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "state_match",
+          "params": [
+            "action",
+            "gap_states"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 37
+        },
+        {
+          "name": "score",
+          "params": [
+            "action",
+            "gap_tags",
+            "gap_states",
+            "current_year"
+          ],
+          "returnType": "tuple[int, dict]",
+          "exported": true,
+          "lineCount": 42
+        },
+        {
+          "name": "rank_actions",
+          "params": [
+            "corpus",
+            "gap_tags",
+            "gap_states",
+            "top_n"
+          ],
+          "returnType": "list[dict]",
+          "exported": true,
+          "lineCount": 24
+        },
+        {
+          "name": "text_query",
+          "params": [
+            "corpus",
+            "query",
+            "top_n"
+          ],
+          "returnType": "list[dict]",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 43
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "argparse",
+          "specifiers": [
+            "argparse"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "os",
+          "specifiers": [
+            "os"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "typing",
+          "specifiers": [
+            "Any"
+          ]
+        }
+      ],
+      "exports": [
+        "load_corpus",
+        "state_match",
+        "score",
+        "rank_actions",
+        "text_query",
+        "main"
+      ],
+      "totalLines": 258,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/SKILL.md": {
+      "filePath": "skills/us-state-privacy-navigator/SKILL.md",
+      "contentHash": "d48882fbfc1960e3ad7725f7ddf6233ba37d10b90afd47edf96ad709e8ff4ecb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 196,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/fixtures/gaps_sample.json": {
+      "filePath": "skills/us-state-privacy-navigator/tests/fixtures/gaps_sample.json",
+      "contentHash": "4c38c1ccde9bec642fc475faf0a3dd4101cc47a6f60e86b1db7fef12171add93",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/fixtures/intake_below_thresholds.json": {
+      "filePath": "skills/us-state-privacy-navigator/tests/fixtures/intake_below_thresholds.json",
+      "contentHash": "fb47b24bb7ec4e96e37a3e550d9eb39e871a5f2e17052db332ab97234d1c081c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/fixtures/intake_ca_only.json": {
+      "filePath": "skills/us-state-privacy-navigator/tests/fixtures/intake_ca_only.json",
+      "contentHash": "1b222330443dc4e1e6b4c13813f0643243b4d5fd3a0306b5647f70815044bea9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/fixtures/intake_multistate.json": {
+      "filePath": "skills/us-state-privacy-navigator/tests/fixtures/intake_multistate.json",
+      "contentHash": "fed549df31afc65d1caa5016bafedd6f82c826bd8ff3f04f810e50ee8082e46c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 46,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/fixtures/memo_clean.md": {
+      "filePath": "skills/us-state-privacy-navigator/tests/fixtures/memo_clean.md",
+      "contentHash": "3f9a32a2d4430992602a70e9aa9a43670e7bec27b1fe1f0980f49117d04dfa67",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/fixtures/memo_with_errors.md": {
+      "filePath": "skills/us-state-privacy-navigator/tests/fixtures/memo_with_errors.md",
+      "contentHash": "d82621dd3eff4cfdf92da3129cd2030110a9435cd931031c8dee2a4fdf6e5957",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 31,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/README.md": {
+      "filePath": "skills/us-state-privacy-navigator/tests/README.md",
+      "contentHash": "2280ad0fb39d7d603e534583e7b7b7bb902601a2712cf04ed6a34064579e235a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/run_all.py": {
+      "filePath": "skills/us-state-privacy-navigator/tests/run_all.py",
+      "contentHash": "6b0a25f54a5ce81371f54b34895085ce43b9adee4571b54c1dabb7430e458dab",
+      "functions": [
+        {
+          "name": "main",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "sys",
+          "specifiers": [
+            "sys"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "main"
+      ],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/test_applicability_check.py": {
+      "filePath": "skills/us-state-privacy-navigator/tests/test_applicability_check.py",
+      "contentHash": "aea02d45db8386ffd6947d9c23d25d7eaddb78731f127f5fe717f5d0675ba3f6",
+      "functions": [
+        {
+          "name": "run_check",
+          "params": [
+            "intake_path"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "get_verdict",
+          "params": [
+            "out",
+            "state"
+          ],
+          "returnType": "str",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [
+        {
+          "name": "ApplicabilityBelowThresholdsTests",
+          "methods": [
+            "setUpClass",
+            "test_no_states_apply",
+            "test_california_does_not_apply",
+            "test_florida_does_not_apply",
+            "test_most_states_resolved"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 34
+        },
+        {
+          "name": "ApplicabilityCaliforniaOnlyTests",
+          "methods": [
+            "setUpClass",
+            "test_california_applies",
+            "test_va_does_not_apply",
+            "test_co_does_not_apply",
+            "test_ct_does_not_apply",
+            "test_fl_does_not_apply",
+            "test_only_california_applies"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 33
+        },
+        {
+          "name": "ApplicabilityMultistateTests",
+          "methods": [
+            "setUpClass",
+            "test_california_applies",
+            "test_virginia_applies",
+            "test_colorado_applies",
+            "test_connecticut_applies",
+            "test_oregon_applies",
+            "test_maryland_applies",
+            "test_florida_does_not_apply",
+            "test_majority_of_states_apply"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 38
+        },
+        {
+          "name": "ApplicabilityOutputStructureTests",
+          "methods": [
+            "test_output_has_summary_and_results",
+            "test_summary_has_all_buckets",
+            "test_each_result_has_required_fields",
+            "test_insufficient_results_have_needed_inputs"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "run_check",
+        "get_verdict",
+        "ApplicabilityBelowThresholdsTests",
+        "ApplicabilityCaliforniaOnlyTests",
+        "ApplicabilityMultistateTests",
+        "ApplicabilityOutputStructureTests"
+      ],
+      "totalLines": 198,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/test_citation_audit.py": {
+      "filePath": "skills/us-state-privacy-navigator/tests/test_citation_audit.py",
+      "contentHash": "64cafc558f6fa3e95c5346c9a4cbbd9203c51bb19a440dbadfb4fffa9d91dddc",
+      "functions": [
+        {
+          "name": "run_audit",
+          "params": [
+            "target",
+            "strict"
+          ],
+          "returnType": "tuple[int, dict]",
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "CitationAuditFixtureTests",
+          "methods": [
+            "test_clean_memo_passes",
+            "test_dirty_memo_flags_errors",
+            "test_planted_implausible_section_flagged"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 48
+        },
+        {
+          "name": "CitationAuditReferenceDocsTests",
+          "methods": [
+            "_audit",
+            "test_applicability_matrix_clean",
+            "test_controller_duties_clean",
+            "test_rights_comparison_clean",
+            "test_sensitive_data_clean",
+            "test_universal_opt_out_clean",
+            "test_kids_and_teens_clean"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 31
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "run_audit",
+        "CitationAuditFixtureTests",
+        "CitationAuditReferenceDocsTests"
+      ],
+      "totalLines": 126,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/test_conflict_resolver.py": {
+      "filePath": "skills/us-state-privacy-navigator/tests/test_conflict_resolver.py",
+      "contentHash": "66ec20b72dc75a47a7d6e5fb45fcd42bba38da3e8e59d3d64e72bb18c2a215fd",
+      "functions": [
+        {
+          "name": "run_script",
+          "params": [
+            "*args"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "find_finding",
+          "params": [
+            "out",
+            "dimension"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [
+        {
+          "name": "ConflictResolverTests",
+          "methods": [
+            "test_output_structure",
+            "test_md_controls_sensitive_data_sale_when_md_in_scope",
+            "test_ca_controls_when_md_not_in_scope",
+            "test_ca_unique_in_authorized_agent_optout",
+            "test_dimension_filter_narrows_output",
+            "test_single_state_still_produces_findings",
+            "test_unknown_state_handled_gracefully"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 84
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "run_script",
+        "find_finding",
+        "ConflictResolverTests"
+      ],
+      "totalLines": 129,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/test_corpus_integrity.py": {
+      "filePath": "skills/us-state-privacy-navigator/tests/test_corpus_integrity.py",
+      "contentHash": "3ac30c071607def8cde2f74442c2c8ac451a565892f9de96ad11e0bce2d3865b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CorpusIntegrityTests",
+          "methods": [
+            "setUpClass",
+            "test_corpus_loads_and_has_meta",
+            "test_all_ids_unique",
+            "test_id_format",
+            "test_required_fields_present",
+            "test_year_is_plausible",
+            "test_violation_theories_in_taxonomy",
+            "test_advisory_entry_tags_empty",
+            "test_anchor_actions_present",
+            "test_regulator_is_list",
+            "test_statutes_is_list",
+            "test_operational_lessons_substantive",
+            "test_monetary_amount_type"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 122
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "CorpusIntegrityTests"
+      ],
+      "totalLines": 166,
+      "hasStructuralAnalysis": true
+    },
+    "skills/us-state-privacy-navigator/tests/test_precedent_match.py": {
+      "filePath": "skills/us-state-privacy-navigator/tests/test_precedent_match.py",
+      "contentHash": "52ff25bb4a422559035834f79bcc37e3dc963f0caa3cd567fe3f3b44924ad1f6",
+      "functions": [
+        {
+          "name": "run_script",
+          "params": [
+            "*args"
+          ],
+          "returnType": "dict",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "PrecedentMatchTests",
+          "methods": [
+            "test_gpc_processor_returns_healthline_first",
+            "test_pixel_health_disclosure_returns_healthcare_anchors",
+            "test_wiretap_session_replay_returns_relevant",
+            "test_state_filter_boosts_score",
+            "test_text_query_returns_matches",
+            "test_batch_mode_processes_all_gaps",
+            "test_match_output_has_required_fields",
+            "test_top_n_respects_limit"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 110
+        }
+      ],
+      "imports": [
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        },
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "unittest",
+          "specifiers": [
+            "unittest"
+          ]
+        },
+        {
+          "source": "pathlib",
+          "specifiers": [
+            "Path"
+          ]
+        }
+      ],
+      "exports": [
+        "run_script",
+        "PrecedentMatchTests"
+      ],
+      "totalLines": 148,
+      "hasStructuralAnalysis": true
+    },
+    "skills/vendor-privacy-policy-first-pass/examples/example_clean_policy.md": {
+      "filePath": "skills/vendor-privacy-policy-first-pass/examples/example_clean_policy.md",
+      "contentHash": "2fb88594010b8a20db80b2bb08a6e596331233ac1f7f9c7717eaf02d2a78d934",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 152,
+      "hasStructuralAnalysis": true
+    },
+    "skills/vendor-privacy-policy-first-pass/examples/example_red_flags.md": {
+      "filePath": "skills/vendor-privacy-policy-first-pass/examples/example_red_flags.md",
+      "contentHash": "2c87a95f0f289427503c55249f2b3b350d5932741aa18983f44c1ca5ec6a7e2f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 202,
+      "hasStructuralAnalysis": true
+    },
+    "skills/vendor-privacy-policy-first-pass/reference/policy_topics.md": {
+      "filePath": "skills/vendor-privacy-policy-first-pass/reference/policy_topics.md",
+      "contentHash": "7cba4aa03775cd982c87c451b06c2afb3658cfd0fcf9475109b035120b0a758f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 238,
+      "hasStructuralAnalysis": true
+    },
+    "skills/vendor-privacy-policy-first-pass/reference/red_flags.md": {
+      "filePath": "skills/vendor-privacy-policy-first-pass/reference/red_flags.md",
+      "contentHash": "c637c534ff2c26e8a1af65e31f753ee978f79cbdca2db8662a54cf38d3c07709",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 330,
+      "hasStructuralAnalysis": true
+    },
+    "skills/vendor-privacy-policy-first-pass/SKILL.md": {
+      "filePath": "skills/vendor-privacy-policy-first-pass/SKILL.md",
+      "contentHash": "f0c1d380fd602aab9e679129ba77a4f97c7240f83584e7528266305f6a1baa8a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 215,
+      "hasStructuralAnalysis": true
+    },
+    "skills/vendor-privacy-policy-first-pass/test-plan.md": {
+      "filePath": "skills/vendor-privacy-policy-first-pass/test-plan.md",
+      "contentHash": "ab3843803d9580332385c4574043127559da67f4bdd645e02ad37ce21209d98e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 160,
+      "hasStructuralAnalysis": true
+    },
+    "skills/vibe-legal-batch-redliner/SKILL.md": {
+      "filePath": "skills/vibe-legal-batch-redliner/SKILL.md",
+      "contentHash": "432b2405f392d602996af51e922a740a943eadf513ec8132094aa5ebcab0424d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 198,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

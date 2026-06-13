@@ -1,0 +1,3975 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "lq-skills",
+    "languages": [
+      "docx",
+      "html",
+      "javascript",
+      "json",
+      "markdown",
+      "python",
+      "txt",
+      "unknown",
+      "yaml"
+    ],
+    "frameworks": [],
+    "description": "Curated collection of harness-agnostic agent skills for legal work built by the Legal Quants community (~100 lawyer-builders across 17+ jurisdictions) — transparent, version-controlled markdown skill definitions with evals, spanning jurisdiction-specific review, citation verification, and statutory analysis.",
+    "analyzedAt": "2026-06-13T00:13:41.685Z",
+    "gitCommitHash": "f8785289381ddc61f2c875b9cf3ba12c07bba7a2"
+  },
+  "nodes": [
+    {
+      "id": "domain:litigation-document-review",
+      "type": "domain",
+      "name": "Litigation Document Review",
+      "summary": "England and Wales-centred litigation skills that quality-control the core artefacts of a civil case: Particulars of Claim against CPR 16/PD 16, witness statements against PD 57AC, disclosure lists under the CPR, appellate drafts against public judicial-preference signals, and sourced chronologies built from case papers. Every flow ends in a confidence-banded report for a supervising lawyer and refuses to certify merits, truth, or compliance. Adjacent case-analysis tooling (adversarial case-file analysis, UK corporate-registry investigation, claim-economics modelling) supports the same litigation practice.",
+      "tags": [
+        "litigation",
+        "england-and-wales",
+        "document-review",
+        "evidence",
+        "cpr"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "Particulars of Claim",
+          "witness statement",
+          "disclosure list",
+          "skeleton argument / grounds of appeal",
+          "chronology event",
+          "confidence-banded review report"
+        ],
+        "businessRules": [
+          "Reports carry confidence bands and never certify merits, truth, privilege calls, or disclosure compliance",
+          "Reviews are grounded in user-supplied documents or cited public sources, never model memory",
+          "CPR 16/PD 16, PD 57AC, and disclosure-order context frame each check; statement-of-truth signing is out of scope"
+        ],
+        "crossDomainInteractions": [
+          "Hands pleadings, skeletons, and statements to the citation-integrity domain as a pre-filing audit gate",
+          "Chronology output feeds statement-of-facts drafting, and reviewer markups on litigation drafts are collated by the drafting domain"
+        ]
+      }
+    },
+    {
+      "id": "domain:contract-review",
+      "type": "domain",
+      "name": "Contract Review & Negotiation Support",
+      "summary": "Perspective-calibrated review skills for commercial agreements: seven-pass SaaS and commercial-purchase MSA reviews, one-way NDA review, regime-aware DPA/BAA checklist review, and clause-level contract Q&A. The shared review pattern pairs a tiered issue checklist with a red-flag catalogue and a Critical/Material/Minor severity rubric, ending in findings logs, redline language, and negotiation fallbacks for counsel.",
+      "tags": [
+        "contracts",
+        "contract-review",
+        "negotiation",
+        "redlines",
+        "msa"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "MSA / Order Form",
+          "one-way NDA",
+          "DPA / HIPAA BAA",
+          "tiered issue checklist",
+          "red-flag catalogue",
+          "severity rubric",
+          "redline language",
+          "clause citation"
+        ],
+        "businessRules": [
+          "Findings are graded Critical/Material/Minor via an explicit severity rubric",
+          "Every review is calibrated to the client perspective: vendor/customer, buyer/supplier, recipient/discloser, controller/processor",
+          "Material gaps get proposed redline language with clause-level citations; named-counsel sign-off headers are mandatory where defined"
+        ],
+        "crossDomainInteractions": [
+          "Redline language from findings is applied as native Word tracked changes by the drafting domain tooling",
+          "DPA Checklist Review receives escalations from the privacy domain vendor-policy triage"
+        ]
+      }
+    },
+    {
+      "id": "domain:privacy-regulatory-compliance",
+      "type": "domain",
+      "name": "Privacy & Regulatory Compliance",
+      "summary": "Compliance counseling skills with the US state privacy navigator as flagship: deterministic 20-state applicability triage, controller/processor status determination, strictest-rule conflict-of-laws synthesis, enforcement-precedent-matched gap analysis, and citation-audited DOCX memoranda. The domain also covers regime-aware vendor privacy-policy triage, NIST AI RMF assessments with verbatim anchors, deadline extraction from regulatory client alerts, and local-first AI-workspace confidentiality audits.",
+      "tags": [
+        "privacy",
+        "compliance",
+        "us-state-law",
+        "ai-governance",
+        "regulatory"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "state privacy statute (CCPA/CPRA, VCDPA, CPA...)",
+          "applicability verdict",
+          "controller/processor status",
+          "compliance ceiling",
+          "enforcement-action corpus (82 actions)",
+          "privacy memorandum",
+          "NIST AI RMF subcategory / GAI action ID",
+          "deadline-organized action checklist"
+        ],
+        "businessRules": [
+          "Applicability thresholds are evaluated deterministically by script (applicability_check.py), not by the model",
+          "Multi-state conflicts resolve to the strictest-rule ceiling with an identified controlling state",
+          "Memos must pass the citation audit before delivery; NIST anchors are quoted verbatim by Subcategory and Action ID",
+          "Workspace audits must map every network path, including BYOK model-provider calls, and disclose exactly what leaves the machine"
+        ],
+        "crossDomainInteractions": [
+          "Vendor-policy triage red flags escalate into the contract domain DPA Checklist Review",
+          "The navigator citation_audit.py applies the registry-wide citation-discipline principle to privacy memos"
+        ]
+      }
+    },
+    {
+      "id": "domain:citation-integrity",
+      "type": "domain",
+      "name": "Citation Integrity & Statutory Analysis",
+      "summary": "Anti-hallucination and authority-discipline skills: verifying that cited UK cases exist on Find Case Law/BAILII, that Singapore citations resolve on eLitigation and statutory references against a retrieval backend, that cited sources actually support the propositions asserted, and that US statutes are read correctly via a definitions-first interpretation framework. The standing rule across the family is never verify from model memory. Jurisdiction research modules (US customs/trade, California property tax, foreign-law research, text provenance) share the same source-grounding discipline.",
+      "tags": [
+        "citation-verification",
+        "hallucination-detection",
+        "statutory-interpretation",
+        "authority",
+        "quality-gate"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "neutral citation",
+          "citation status table",
+          "proposition support grade",
+          "statutory reference verdict (valid/amended/repealed/not found)",
+          "canon of construction",
+          "authority source (Find Case Law, BAILII, eLitigation)"
+        ],
+        "businessRules": [
+          "Verification from model memory is a hard fail: sources must be live or user-supplied",
+          "Proposition checking targets citation misuse and overstatement, not mere existence of the authority",
+          "Escalation paths cover Scotland/Northern Ireland/tribunal materials and unverifiable authorities; statutory analysis is US-only and halts-and-routes outside scope"
+        ],
+        "crossDomainInteractions": [
+          "Operates as the pre-filing quality gate on drafts produced or reviewed in the litigation domain",
+          "Citation-discipline principles are reused by the privacy domain memo audit script"
+        ]
+      }
+    },
+    {
+      "id": "domain:document-drafting-assembly",
+      "type": "domain",
+      "name": "Document Drafting & Assembly",
+      "summary": "Skills that produce or transform legal documents rather than review them: the CoQuill seven-phase template-driven assembly pipeline (analyzer, renderer, and transcriber sub-agents around Jinja2 templates), multi-reviewer DOCX feedback collation, batch playbook-driven contract redlining, legal translation across language pairs, and plain-language rewriting for non-legal audiences. A Singapore tracked-changes tooling family (redlines, superdoc-redlines, office-word-diff) supplies the native Word revision machinery. Output is always a draft requiring legal review.",
+      "tags": [
+        "document-assembly",
+        "drafting",
+        "tracked-changes",
+        "translation",
+        "plain-language"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entities": [
+          "template + manifest.yaml",
+          "variable interview",
+          "rendered draft (docx/html/md/pdf)",
+          "interview transcript",
+          "resolution checklist",
+          "native Word tracked change",
+          "pre-translation glossary"
+        ],
+        "businessRules": [
+          "Rendered documents carry a mandatory draft-requires-legal-review notice; unfilled placeholders fail validation",
+          "Reviewer feedback is collated, never auto-merged; every batch redline requires per-change lawyer review",
+          "Translation preserves legal effect over literal wording, with strict proper-noun and date rules and a translator-notes delegation gate"
+        ],
+        "crossDomainInteractions": [
+          "Applies redline language produced by contract-review findings as native Word revisions",
+          "Collates reviewer markups on litigation drafts and turns chronologies into statement-of-facts drafts"
+        ]
+      }
+    },
+    {
+      "id": "domain:skill-quality-assurance",
+      "type": "domain",
+      "name": "Skill Quality Assurance & Governance",
+      "summary": "The meta-domain that keeps a 40-plus-skill, multi-author registry coherent: conversational skill authoring via skill-creator, lightweight behavioral prompt evals for prose skills, a stdlib unittest suite for the deterministic script core, adversarial multi-agent QC certificates for AI deliverables, and the contribution pipeline defined by CONTRIBUTING, PR-READINESS, and ACCESS-MODES. Legal-substance skills face a higher claim/draft/attest/review/merge bar than tooling skills.",
+      "tags": [
+        "quality-assurance",
+        "evals",
+        "governance",
+        "meta-skill",
+        "testing"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entities": [
+          "SKILL.md + references skill format",
+          "evals.yaml scenario",
+          "hard-fail condition",
+          "unittest module / fixture",
+          "QC certificate",
+          "PR-readiness checklist",
+          "access-mode policy"
+        ],
+        "businessRules": [
+          "Legal-substance skills require the five-step claim/draft/attest/review/merge process with named attestation",
+          "Behavioral evals hard-fail on verifying from model memory or predicting legal outcomes",
+          "Skills assume no tool or credential access (ACCESS-MODES); content hygiene forbids firm, client, or personal names",
+          "Privilege guidance is propagated into every generated skill by skill-creator"
+        ],
+        "crossDomainInteractions": [
+          "Behavioral evals and acceptance test plans gate skills in every other domain",
+          "The deterministic test suite pins the privacy navigator script engine"
+        ]
+      }
+    },
+    {
+      "id": "flow:uk-particulars-of-claim-review",
+      "type": "flow",
+      "name": "Particulars of Claim Review",
+      "summary": "Five-step QC review of draft England and Wales Particulars of Claim against CPR 16/PD 16, producing an element map per cause of action and a confidence-banded risk review without certifying merits.",
+      "tags": [
+        "pleadings",
+        "cpr-16",
+        "england-and-wales"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"review these draft Particulars of Claim\" with the draft and claim context",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:uk-particulars-of-claim-review:confirm-claim-context",
+      "type": "step",
+      "name": "Confirm Claim Context",
+      "summary": "Confirm parties, causes of action, track, and governing procedural context before assessing anything in the draft.",
+      "tags": [
+        "intake",
+        "pleadings"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-particulars-of-claim-review/SKILL.md"
+    },
+    {
+      "id": "step:uk-particulars-of-claim-review:build-element-map",
+      "type": "step",
+      "name": "Build Element Map",
+      "summary": "Map each pleaded cause of action to its legal elements, marking which elements are pleaded, where, and on what material facts.",
+      "tags": [
+        "element-mapping",
+        "analysis"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-particulars-of-claim-review/references/pleading-review-playbook.md"
+    },
+    {
+      "id": "step:uk-particulars-of-claim-review:review-structure-against-cpr16",
+      "type": "step",
+      "name": "Review Structure Against CPR 16",
+      "summary": "Check pleading structure and material-fact sufficiency against CPR 16/PD 16 requirements.",
+      "tags": [
+        "cpr-16",
+        "compliance"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-particulars-of-claim-review/SKILL.md"
+    },
+    {
+      "id": "step:uk-particulars-of-claim-review:surface-litigation-risks",
+      "type": "step",
+      "name": "Surface Litigation Risks",
+      "summary": "Flag limitation, remedies, interest, and party-position risks raised by the draft.",
+      "tags": [
+        "risk",
+        "limitation"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-particulars-of-claim-review/references/pleading-review-playbook.md"
+    },
+    {
+      "id": "step:uk-particulars-of-claim-review:produce-confidence-banded-review",
+      "type": "step",
+      "name": "Produce Confidence-Banded Review",
+      "summary": "Deliver the review report with confidence bands for counsel; no merits certification or statement-of-truth signing.",
+      "tags": [
+        "report",
+        "confidence-bands"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-particulars-of-claim-review/examples/output.md"
+    },
+    {
+      "id": "flow:uk-witness-statement-review",
+      "type": "flow",
+      "name": "Witness Statement Review",
+      "summary": "Five-step review of draft witness statements in England and Wales civil proceedings for PD 57AC and statement-of-truth compliance, classifying paragraphs and checking source support for each assertion.",
+      "tags": [
+        "witness-statements",
+        "pd-57ac",
+        "evidence-review"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"review this draft witness statement\" with the statement, exhibits, and chronology",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:uk-witness-statement-review:confirm-proceedings-context",
+      "type": "step",
+      "name": "Confirm Proceedings Context",
+      "summary": "Confirm the proceedings, the witness, and the purpose of the statement before review.",
+      "tags": [
+        "intake",
+        "evidence"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-witness-statement-review/SKILL.md"
+    },
+    {
+      "id": "step:uk-witness-statement-review:build-statement-map",
+      "type": "step",
+      "name": "Build Statement Map",
+      "summary": "Classify each paragraph first: first-hand fact, document-derived recollection, opinion, or argument, per the witness-review playbook.",
+      "tags": [
+        "classification",
+        "statement-map"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-witness-statement-review/references/witness-review-playbook.md"
+    },
+    {
+      "id": "step:uk-witness-statement-review:check-source-support",
+      "type": "step",
+      "name": "Check Source Support",
+      "summary": "Verify each assertion against exhibits and underlying documents, recording where support is missing or contradicted.",
+      "tags": [
+        "source-support",
+        "verification"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-witness-statement-review/SKILL.md"
+    },
+    {
+      "id": "step:uk-witness-statement-review:flag-hearsay-and-argument",
+      "type": "step",
+      "name": "Flag Hearsay and Argument",
+      "summary": "Flag hearsay, argument, speculation, and PD 57AC drafting risks such as reported speech presented as recollection.",
+      "tags": [
+        "hearsay",
+        "pd-57ac"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-witness-statement-review/references/witness-review-playbook.md"
+    },
+    {
+      "id": "step:uk-witness-statement-review:report-with-confidence-bands",
+      "type": "step",
+      "name": "Report With Confidence Bands",
+      "summary": "Produce the review report with confidence bands; the skill does not certify truth or settle admissibility.",
+      "tags": [
+        "report",
+        "confidence-bands"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-witness-statement-review/examples/output.md"
+    },
+    {
+      "id": "flow:uk-disclosure-list-qc",
+      "type": "flow",
+      "name": "Disclosure List QC",
+      "summary": "Six-step quality-control review of England and Wales disclosure lists under the CPR: coverage of issues, custodians, and sources, inspection and privilege flags, and adverse/helpful document identification — without making final privilege calls.",
+      "tags": [
+        "disclosure",
+        "privilege",
+        "litigation-qc"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"QC this disclosure list\" with the list, pleadings, and disclosure order",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:uk-disclosure-list-qc:confirm-disclosure-context",
+      "type": "step",
+      "name": "Confirm Disclosure Context",
+      "summary": "Confirm the disclosure order or model, pleaded issues, and the parties' roles before assessing the list.",
+      "tags": [
+        "intake",
+        "disclosure"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-disclosure-list-review/SKILL.md"
+    },
+    {
+      "id": "step:uk-disclosure-list-qc:inventory-the-list",
+      "type": "step",
+      "name": "Inventory the List",
+      "summary": "Inventory the disclosure list entries, formats, and date ranges to establish what has actually been disclosed.",
+      "tags": [
+        "inventory"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-disclosure-list-review/SKILL.md"
+    },
+    {
+      "id": "step:uk-disclosure-list-qc:check-issue-custodian-coverage",
+      "type": "step",
+      "name": "Check Issue and Custodian Coverage",
+      "summary": "Map list coverage against pleaded or ordered issues, custodians, and repositories to surface gaps such as missing sources.",
+      "tags": [
+        "coverage",
+        "custodians"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-disclosure-list-review/references/disclosure-review-playbook.md"
+    },
+    {
+      "id": "step:uk-disclosure-list-qc:review-inspection-privilege-flags",
+      "type": "step",
+      "name": "Review Inspection and Privilege Flags",
+      "summary": "Review inspection positions and privilege claims flagged on the list for consistency and over- or under-claiming patterns.",
+      "tags": [
+        "privilege",
+        "inspection"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-disclosure-list-review/references/disclosure-review-playbook.md"
+    },
+    {
+      "id": "step:uk-disclosure-list-qc:identify-adverse-helpful-documents",
+      "type": "step",
+      "name": "Identify Adverse and Helpful Documents",
+      "summary": "Identify documents likely adverse or helpful to the client case for follow-up review.",
+      "tags": [
+        "adverse-documents",
+        "triage"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-disclosure-list-review/SKILL.md"
+    },
+    {
+      "id": "step:uk-disclosure-list-qc:produce-qc-report",
+      "type": "step",
+      "name": "Produce QC Report",
+      "summary": "Deliver the QC report with confidence bands; the skill does not make final privilege calls or certify disclosure compliance.",
+      "tags": [
+        "report",
+        "confidence-bands"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-disclosure-list-review/examples/output.md"
+    },
+    {
+      "id": "flow:build-case-chronology",
+      "type": "flow",
+      "name": "Build Case Chronology",
+      "summary": "Jurisdiction-agnostic flow that turns legal documents and disclosure materials into a sourced event chronology with confidence bands, de-duplication, and gap identification, plus a statement-of-facts variant.",
+      "tags": [
+        "chronology",
+        "evidence",
+        "timeline"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"build a chronology\" over disclosure, correspondence, pleadings, and witness evidence",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:build-case-chronology:define-chronology-scope",
+      "type": "step",
+      "name": "Define Chronology Scope",
+      "summary": "Define the scope: issues, parties, period, and source set the chronology must cover.",
+      "tags": [
+        "scope",
+        "intake"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/building-chronologies/SKILL.md"
+    },
+    {
+      "id": "step:build-case-chronology:extract-dated-events",
+      "type": "step",
+      "name": "Extract Dated Events",
+      "summary": "Extract dated events with source identifiers and confidence bands, keeping event-date versus document-date discipline per the chronology model.",
+      "tags": [
+        "extraction",
+        "confidence-bands"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/building-chronologies/references/chronology-model.md"
+    },
+    {
+      "id": "step:build-case-chronology:deduplicate-events",
+      "type": "step",
+      "name": "De-duplicate Events",
+      "summary": "Merge duplicate events reported across multiple documents while preserving each source reference.",
+      "tags": [
+        "deduplication"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/building-chronologies/SKILL.md"
+    },
+    {
+      "id": "step:build-case-chronology:identify-timeline-gaps",
+      "type": "step",
+      "name": "Identify Timeline Gaps",
+      "summary": "Identify evidential gaps and unexplained periods in the assembled timeline.",
+      "tags": [
+        "gap-analysis"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/building-chronologies/SKILL.md"
+    },
+    {
+      "id": "step:build-case-chronology:emit-chronology-or-statement-of-facts",
+      "type": "step",
+      "name": "Emit Chronology or Statement of Facts",
+      "summary": "Output the sourced chronology, or the statement-of-facts variant for drafting use.",
+      "tags": [
+        "output",
+        "statement-of-facts"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/building-chronologies/examples/output.md"
+    },
+    {
+      "id": "flow:appellate-preference-check",
+      "type": "flow",
+      "name": "Appellate Drafting Preference Check",
+      "summary": "Five-step check of England and Wales Court of Appeal drafts (skeleton arguments, grounds, respondent's notices) against source-backed judicial drafting preferences, under guardrails forbidding outcome prediction and private-preference inference.",
+      "tags": [
+        "court-of-appeal",
+        "appellate-drafting",
+        "judicial-preferences"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"check this skeleton argument against the constitution's drafting preferences\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:appellate-preference-check:build-decision-corpus",
+      "type": "step",
+      "name": "Build Decision Corpus",
+      "summary": "Assemble a public-source corpus of recent Court of Appeal decisions relevant to the panel and subject matter.",
+      "tags": [
+        "corpus",
+        "public-sources"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/SKILL.md"
+    },
+    {
+      "id": "step:appellate-preference-check:extract-preference-signals",
+      "type": "step",
+      "name": "Extract Preference Signals",
+      "summary": "Extract and scope judicial drafting-preference signals from the corpus with confidence bands, per the appellate preference model.",
+      "tags": [
+        "signal-extraction",
+        "confidence-bands"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/references/appellate-preference-model.md"
+    },
+    {
+      "id": "step:appellate-preference-check:profile-the-draft",
+      "type": "step",
+      "name": "Profile the Draft",
+      "summary": "Profile the draft appellate document: structure, citation style, length, and argumentation patterns.",
+      "tags": [
+        "profiling"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/SKILL.md"
+    },
+    {
+      "id": "step:appellate-preference-check:compare-draft-to-signals",
+      "type": "step",
+      "name": "Compare Draft to Signals",
+      "summary": "Compare the draft profile against the extracted preference signals and identify divergences worth addressing.",
+      "tags": [
+        "comparison"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/SKILL.md"
+    },
+    {
+      "id": "step:appellate-preference-check:report-without-outcome-prediction",
+      "type": "step",
+      "name": "Report Without Outcome Prediction",
+      "summary": "Report findings under guardrails that forbid outcome prediction, vote forecasting, and inferring private judicial preferences.",
+      "tags": [
+        "report",
+        "guardrails"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-court-of-appeal-judicial-preference-check/examples/output.md"
+    },
+    {
+      "id": "flow:saas-msa-review",
+      "type": "flow",
+      "name": "SaaS MSA Review",
+      "summary": "Seven-pass review of SaaS master services and subscription agreements calibrated to the vendor or customer perspective, producing severity-rated findings, redline language, and MSA-vs-Order-Form conflict analysis.",
+      "tags": [
+        "saas",
+        "msa",
+        "contract-review"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"review this SaaS MSA from the customer side\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:saas-msa-review:confirm-perspective-and-mode",
+      "type": "step",
+      "name": "Confirm Perspective and Mode",
+      "summary": "Establish the client side (vendor or customer) and review depth, applying the perspective lens to each issue area.",
+      "tags": [
+        "perspective",
+        "intake"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/msa-review-saas/reference/perspective_lens.md"
+    },
+    {
+      "id": "step:saas-msa-review:run-seven-pass-review",
+      "type": "step",
+      "name": "Run Seven-Pass Review",
+      "summary": "Work the agreement in seven passes against the tiered issue checklist, from Tier 1 core terms (liability, indemnification) outward.",
+      "tags": [
+        "issue-checklist",
+        "multi-pass"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/msa-review-saas/reference/issue_checklist.md"
+    },
+    {
+      "id": "step:saas-msa-review:screen-saas-red-flags",
+      "type": "step",
+      "name": "Screen SaaS Red Flags",
+      "summary": "Screen for catalogued SaaS red flags: unilateral amendment rights, suspension without notice, ML-training rights over customer data, and similar.",
+      "tags": [
+        "red-flags"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/msa-review-saas/reference/red_flags.md"
+    },
+    {
+      "id": "step:saas-msa-review:grade-finding-severity",
+      "type": "step",
+      "name": "Grade Finding Severity",
+      "summary": "Grade each finding Critical, Material, or Minor using the severity rubric.",
+      "tags": [
+        "severity",
+        "rubric"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/msa-review-saas/reference/severity_rubric.md"
+    },
+    {
+      "id": "step:saas-msa-review:draft-redline-language",
+      "type": "step",
+      "name": "Draft Redline Language",
+      "summary": "Draft proposed redline language for material gaps, anchored to clause-level citations.",
+      "tags": [
+        "redlines",
+        "drafting"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/msa-review-saas/SKILL.md"
+    },
+    {
+      "id": "step:saas-msa-review:check-msa-order-form-conflicts",
+      "type": "step",
+      "name": "Check MSA vs Order Form Conflicts",
+      "summary": "Surface conflicts between the MSA body and Order Forms or attached schedules.",
+      "tags": [
+        "conflict-check",
+        "order-form"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/msa-review-saas/SKILL.md"
+    },
+    {
+      "id": "step:saas-msa-review:report-severity-rated-findings",
+      "type": "step",
+      "name": "Report Severity-Rated Findings",
+      "summary": "Deliver the perspective-calibrated findings report with severity ratings and redlines for counsel.",
+      "tags": [
+        "report"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/msa-review-saas/examples/example_customer_review.md"
+    },
+    {
+      "id": "flow:commercial-purchase-msa-review",
+      "type": "flow",
+      "name": "Commercial Purchase MSA Review",
+      "summary": "Seven-pass review of commercial purchase and supply MSAs for physical goods, equipment, and non-software services, calibrated to buyer or supplier perspective, with MSA-vs-purchase-order conflict analysis.",
+      "tags": [
+        "procurement",
+        "msa",
+        "contract-review"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"review this master supply agreement from the buyer side\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:commercial-purchase-msa-review:confirm-buyer-supplier-perspective",
+      "type": "step",
+      "name": "Confirm Buyer/Supplier Perspective",
+      "summary": "Establish whether the client buys or supplies and apply the buyer-versus-supplier lens to each issue area.",
+      "tags": [
+        "perspective",
+        "intake"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/msa-review-commercial-purchase/reference/perspective_lens.md"
+    },
+    {
+      "id": "step:commercial-purchase-msa-review:run-seven-pass-review",
+      "type": "step",
+      "name": "Run Seven-Pass Review",
+      "summary": "Work the agreement in seven passes against the tiered issue checklist, starting with Tier 1 core terms such as price and payment.",
+      "tags": [
+        "issue-checklist",
+        "multi-pass"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/msa-review-commercial-purchase/reference/issue_checklist.md"
+    },
+    {
+      "id": "step:commercial-purchase-msa-review:screen-purchase-red-flags",
+      "type": "step",
+      "name": "Screen Purchase Red Flags",
+      "summary": "Screen for catalogued purchase-MSA red flags: open-ended price-adjustment rights, deemed acceptance, AS-IS warranty disclaimers.",
+      "tags": [
+        "red-flags"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/msa-review-commercial-purchase/reference/red_flags.md"
+    },
+    {
+      "id": "step:commercial-purchase-msa-review:grade-finding-severity",
+      "type": "step",
+      "name": "Grade Finding Severity",
+      "summary": "Grade each finding Critical, Material, or Minor using the severity rubric.",
+      "tags": [
+        "severity",
+        "rubric"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/msa-review-commercial-purchase/reference/severity_rubric.md"
+    },
+    {
+      "id": "step:commercial-purchase-msa-review:draft-redlines-and-po-conflict-analysis",
+      "type": "step",
+      "name": "Draft Redlines and PO Conflict Analysis",
+      "summary": "Draft redline language for material gaps and analyse MSA-versus-purchase-order precedence conflicts.",
+      "tags": [
+        "redlines",
+        "purchase-order"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/msa-review-commercial-purchase/SKILL.md"
+    },
+    {
+      "id": "step:commercial-purchase-msa-review:report-findings",
+      "type": "step",
+      "name": "Report Findings",
+      "summary": "Deliver the severity-rated findings report with clause-level citations.",
+      "tags": [
+        "report"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/msa-review-commercial-purchase/examples/example_buyer_review.md"
+    },
+    {
+      "id": "flow:nda-review",
+      "type": "flow",
+      "name": "One-Way NDA Review",
+      "summary": "Five-step playbook review of unilateral commercial NDAs from the recipient or discloser perspective, producing an executive summary and clause-by-clause issue log with risk bands, preferred redlines, and negotiation fallbacks.",
+      "tags": [
+        "nda",
+        "confidentiality",
+        "negotiation"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"review this NDA we've been asked to sign\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:nda-review:confirm-recipient-or-discloser-perspective",
+      "type": "step",
+      "name": "Confirm Recipient or Discloser Perspective",
+      "summary": "Establish which side the client is on, since recipient and discloser obligations diverge sharply.",
+      "tags": [
+        "perspective",
+        "intake"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/nda-review/references/PARTY_OBLIGATIONS.md"
+    },
+    {
+      "id": "step:nda-review:inspect-eight-key-clauses",
+      "type": "step",
+      "name": "Inspect Eight Key Clauses",
+      "summary": "Inspect the eight key NDA provisions, starting with the definition of Confidential Information.",
+      "tags": [
+        "key-clauses",
+        "checklist"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/nda-review/references/KEY_CLAUSES.md"
+    },
+    {
+      "id": "step:nda-review:check-exceptions-duration-remedies",
+      "type": "step",
+      "name": "Check Exceptions, Duration, and Remedies",
+      "summary": "Check the five standard carve-outs, term versus survival of obligations, territory, and the remedies/liability allocation.",
+      "tags": [
+        "carve-outs",
+        "duration",
+        "remedies"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/nda-review/references/STANDARD_EXCEPTIONS.md"
+    },
+    {
+      "id": "step:nda-review:grade-clause-risk",
+      "type": "step",
+      "name": "Grade Clause Risk",
+      "summary": "Grade each clause issue High, Medium, or Low risk from the client perspective.",
+      "tags": [
+        "risk-bands"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/nda-review/SKILL.md"
+    },
+    {
+      "id": "step:nda-review:deliver-summary-and-issue-log",
+      "type": "step",
+      "name": "Deliver Summary and Issue Log",
+      "summary": "Deliver the executive summary and clause-by-clause issue log with preferred redlines and fallbacks, under the mandatory named-counsel sign-off header.",
+      "tags": [
+        "report",
+        "redlines"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/nda-review/SKILL.md"
+    },
+    {
+      "id": "flow:contract-qa",
+      "type": "flow",
+      "name": "Contract Q&A",
+      "summary": "Classify-locate-answer flow for specific questions about a loaded contract (meaning, location, unusualness, scenario outcomes), with per-type output formats, verbatim clause citations, confidence bands, and refusal rules.",
+      "tags": [
+        "question-answering",
+        "contracts",
+        "clause-citation"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: a specific question about a loaded contract, e.g. \"can we terminate for convenience?\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:contract-qa:classify-question-type",
+      "type": "step",
+      "name": "Classify Question Type",
+      "summary": "Classify the question into the six-type taxonomy (A direct lookup through F out of scope) using the quick decision tree.",
+      "tags": [
+        "classification",
+        "taxonomy"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/contract-qa/reference/question_classification.md"
+    },
+    {
+      "id": "step:contract-qa:locate-relevant-clauses",
+      "type": "step",
+      "name": "Locate Relevant Clauses",
+      "summary": "Locate the contract provisions that bear on the question, including definitions and cross-referenced clauses.",
+      "tags": [
+        "retrieval",
+        "clauses"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/contract-qa/SKILL.md"
+    },
+    {
+      "id": "step:contract-qa:answer-per-type-format",
+      "type": "step",
+      "name": "Answer Per Type Format",
+      "summary": "Answer in the output format prescribed for the question type, applying scenario reasoning where required.",
+      "tags": [
+        "answering",
+        "formats"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/contract-qa/SKILL.md"
+    },
+    {
+      "id": "step:contract-qa:cite-clauses-verbatim",
+      "type": "step",
+      "name": "Cite Clauses Verbatim",
+      "summary": "Support the answer with clause-level citations, following the verbatim-quote versus paraphrase rules.",
+      "tags": [
+        "citation",
+        "verbatim"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/contract-qa/reference/citation_format.md"
+    },
+    {
+      "id": "step:contract-qa:attach-confidence-and-refusals",
+      "type": "step",
+      "name": "Attach Confidence and Refusals",
+      "summary": "Attach the H/M/L confidence band, privilege guidance, and refuse out-of-scope question types.",
+      "tags": [
+        "confidence-bands",
+        "refusal-rules"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/contract-qa/SKILL.md"
+    },
+    {
+      "id": "flow:dpa-checklist-review",
+      "type": "flow",
+      "name": "DPA / BAA Checklist Review",
+      "summary": "Regime-aware three-pass review of Data Processing Agreements, Addenda, and HIPAA BAAs against GDPR Article 28, US state privacy laws, HIPAA, or general commercial requirements, producing a severity-scored checklist with gap language.",
+      "tags": [
+        "dpa",
+        "gdpr",
+        "hipaa",
+        "privacy-contracts"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"review this DPA against GDPR Article 28\" with the agreement and perspective",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:dpa-checklist-review:determine-applicable-regime",
+      "type": "step",
+      "name": "Determine Applicable Regime",
+      "summary": "Determine whether GDPR Article 28, US state privacy law, HIPAA, or the general commercial fallback governs the agreement, and the client perspective.",
+      "tags": [
+        "regime",
+        "intake"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/dpa-checklist-review/SKILL.md"
+    },
+    {
+      "id": "step:dpa-checklist-review:load-regime-requirements",
+      "type": "step",
+      "name": "Load Regime Requirements",
+      "summary": "Load the matching regime reference, e.g. the Article 28(3) required terms or the twelve HIPAA BAA terms.",
+      "tags": [
+        "reference-loading",
+        "requirements"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/dpa-checklist-review/reference/gdpr_requirements.md"
+    },
+    {
+      "id": "step:dpa-checklist-review:run-three-pass-review",
+      "type": "step",
+      "name": "Run Three-Pass Review",
+      "summary": "Run the three-pass review of the agreement against each required term.",
+      "tags": [
+        "multi-pass",
+        "review"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/dpa-checklist-review/SKILL.md"
+    },
+    {
+      "id": "step:dpa-checklist-review:score-presence-and-severity",
+      "type": "step",
+      "name": "Score Presence and Severity",
+      "summary": "Mark each required term present, partial, missing, or unclear with clause references, and grade gap severity.",
+      "tags": [
+        "scoring",
+        "severity"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/dpa-checklist-review/SKILL.md"
+    },
+    {
+      "id": "step:dpa-checklist-review:deliver-checklist-with-gap-language",
+      "type": "step",
+      "name": "Deliver Checklist With Gap Language",
+      "summary": "Deliver the severity-scored checklist with proposed gap language, under the skill's privilege guidance.",
+      "tags": [
+        "report",
+        "gap-language"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/dpa-checklist-review/examples/example_gdpr.md"
+    },
+    {
+      "id": "flow:multistate-privacy-assessment",
+      "type": "flow",
+      "name": "Multi-State Privacy Assessment",
+      "summary": "The flagship navigator flow: intake questionnaire, deterministic 20-state applicability sweep, controller/processor status determination, strictest-rule conflict synthesis, precedent-matched gap analysis, citation audit, and DOCX memo generation.",
+      "tags": [
+        "us-state-privacy",
+        "applicability",
+        "conflict-of-laws",
+        "memo"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"which state privacy laws apply to us and where are our gaps?\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:multistate-privacy-assessment:run-intake-questionnaire",
+      "type": "step",
+      "name": "Run Intake Questionnaire",
+      "summary": "Gather the business profile — revenue, consumer counts, data sales/sharing, sectoral overlays — via the structured intake questionnaire.",
+      "tags": [
+        "intake",
+        "questionnaire"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/us-state-privacy-navigator/references/workflows/intake-questionnaire.md"
+    },
+    {
+      "id": "step:multistate-privacy-assessment:run-applicability-sweep",
+      "type": "step",
+      "name": "Run 20-State Applicability Sweep",
+      "summary": "Evaluate the intake deterministically against all 20 state applicability thresholds with applicability_check.py, including CCPA disjunctive triggers, the 16 Virginia-model two-tier tests, SBA-keyed Texas/Nebraska tests, and Florida's $1B trigger.",
+      "tags": [
+        "threshold-engine",
+        "deterministic",
+        "script"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/us-state-privacy-navigator/scripts/applicability_check.py"
+    },
+    {
+      "id": "step:multistate-privacy-assessment:determine-controller-processor-status",
+      "type": "step",
+      "name": "Determine Controller/Processor Status",
+      "summary": "Determine controller or processor status per data flow for each applicable state law.",
+      "tags": [
+        "status-determination",
+        "data-flows"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/references/workflows/status-determination.md"
+    },
+    {
+      "id": "step:multistate-privacy-assessment:synthesize-multistate-ceiling",
+      "type": "step",
+      "name": "Synthesize Multi-State Ceiling",
+      "summary": "Compute the compliance ceiling with conflict_resolver.py: the strictest rule, controlling state, and implementation guidance per compliance dimension.",
+      "tags": [
+        "conflict-of-laws",
+        "ceiling",
+        "script"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/us-state-privacy-navigator/scripts/conflict_resolver.py"
+    },
+    {
+      "id": "step:multistate-privacy-assessment:run-gap-analysis",
+      "type": "step",
+      "name": "Run Gap Analysis",
+      "summary": "Assess current practices against the ceiling using the gap-analysis method, producing a severity-scored gap log.",
+      "tags": [
+        "gap-analysis",
+        "severity"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/references/workflows/gap-analysis-method.md"
+    },
+    {
+      "id": "step:multistate-privacy-assessment:match-enforcement-precedent",
+      "type": "step",
+      "name": "Match Enforcement Precedent",
+      "summary": "Rank the 82-action enforcement corpus against each gap with precedent_match.py, weighting violation-theory tags and state proximity.",
+      "tags": [
+        "enforcement",
+        "precedent",
+        "script"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/scripts/precedent_match.py"
+    },
+    {
+      "id": "step:multistate-privacy-assessment:audit-memo-citations",
+      "type": "step",
+      "name": "Audit Memo Citations",
+      "summary": "Gate the memo with citation_audit.py: flag substantive claims lacking inline statutory citations and implausible code sections, with a CI-style exit code.",
+      "tags": [
+        "citation-audit",
+        "quality-gate",
+        "script"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/scripts/citation_audit.py"
+    },
+    {
+      "id": "step:multistate-privacy-assessment:generate-docx-memo",
+      "type": "step",
+      "name": "Generate DOCX Memo",
+      "summary": "Build the client-ready multi-state privacy memorandum — cover, TOC, disclaimer, applicability matrix, status and gap tables — with generate_docx_memo.js.",
+      "tags": [
+        "docx",
+        "deliverable",
+        "script"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/scripts/generate_docx_memo.js"
+    },
+    {
+      "id": "flow:vendor-privacy-policy-triage",
+      "type": "flow",
+      "name": "Vendor Privacy Policy Triage",
+      "summary": "Fast regime-aware (GDPR, CCPA/CPRA, HIPAA, FERPA) first-pass review of a vendor's published privacy policy: structured summary of data practices plus severity-calibrated red flags to decide whether deeper diligence or DPA negotiation is warranted.",
+      "tags": [
+        "vendor-diligence",
+        "privacy-policy",
+        "triage"
+      ],
+      "complexity": "simple",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"give this vendor's privacy policy a first pass\" with the policy text or URL",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:vendor-privacy-policy-triage:identify-regime-lens",
+      "type": "step",
+      "name": "Identify Regime Lens",
+      "summary": "Identify which regimes (GDPR, CCPA/CPRA, HIPAA, FERPA) frame the review given the client's context and data.",
+      "tags": [
+        "regime",
+        "intake"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/vendor-privacy-policy-first-pass/SKILL.md"
+    },
+    {
+      "id": "step:vendor-privacy-policy-triage:summarize-ten-policy-topics",
+      "type": "step",
+      "name": "Summarize Ten Policy Topics",
+      "summary": "Produce the structured summary across the 10 standard privacy-policy topics: data collected, use, sharing, retention, and the rest.",
+      "tags": [
+        "summary",
+        "policy-topics"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/vendor-privacy-policy-first-pass/reference/policy_topics.md"
+    },
+    {
+      "id": "step:vendor-privacy-policy-triage:screen-red-flags-by-severity",
+      "type": "step",
+      "name": "Screen Red Flags by Severity",
+      "summary": "Screen the policy against the categorized red-flag catalogue with Critical/Material/Minor calibration, e.g. catch-all data uses.",
+      "tags": [
+        "red-flags",
+        "severity"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/vendor-privacy-policy-first-pass/reference/red_flags.md"
+    },
+    {
+      "id": "step:vendor-privacy-policy-triage:recommend-diligence-or-dpa-escalation",
+      "type": "step",
+      "name": "Recommend Diligence or DPA Escalation",
+      "summary": "Recommend whether findings warrant deeper diligence or DPA negotiation, handing off to the DPA checklist review where needed.",
+      "tags": [
+        "recommendation",
+        "escalation"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/vendor-privacy-policy-first-pass/SKILL.md"
+    },
+    {
+      "id": "flow:nist-ai-rmf-assessment",
+      "type": "flow",
+      "name": "NIST AI RMF Assessment",
+      "summary": "Applies NIST AI 100-1 plus the AI 600-1 Generative AI Profile to a specific AI system in one of three modes (consult, governance plan, full assessment), citing Subcategory and Action IDs verbatim with provenance and decline pathways.",
+      "tags": [
+        "ai-governance",
+        "nist",
+        "risk-management"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"assess our chatbot against the NIST AI RMF\" with the system description",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:nist-ai-rmf-assessment:select-engagement-mode",
+      "type": "step",
+      "name": "Select Engagement Mode",
+      "summary": "Select Mode 1 consult, Mode 2 governance plan, or Mode 3 full assessment based on the user's question and system maturity.",
+      "tags": [
+        "modes",
+        "intake"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/nist-ai-rmf/SKILL.md"
+    },
+    {
+      "id": "step:nist-ai-rmf-assessment:route-reference-loading",
+      "type": "step",
+      "name": "Route Reference Loading",
+      "summary": "Use the routing index to load only the needed references: core NIST AI 100-1 extracts versus the AI 600-1 GenAI overlay and the policy-taxonomy crosswalk.",
+      "tags": [
+        "routing-index",
+        "reference-loading"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/nist-ai-rmf/references/README.md"
+    },
+    {
+      "id": "step:nist-ai-rmf-assessment:apply-core-functions",
+      "type": "step",
+      "name": "Apply Core Functions",
+      "summary": "Work the four AI RMF Core functions — GOVERN, MAP, MEASURE, MANAGE — and their categories against the AI system.",
+      "tags": [
+        "govern-map-measure-manage",
+        "core"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/nist-ai-rmf/references/core/functions.md"
+    },
+    {
+      "id": "step:nist-ai-rmf-assessment:overlay-genai-profile",
+      "type": "step",
+      "name": "Overlay GenAI Profile",
+      "summary": "Overlay the 12 generative-AI risks and the profile's suggested actions where the system is generative.",
+      "tags": [
+        "genai-risks",
+        "profile"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/nist-ai-rmf/references/gai-profile/risks.md"
+    },
+    {
+      "id": "step:nist-ai-rmf-assessment:emit-verbatim-anchored-output",
+      "type": "step",
+      "name": "Emit Verbatim-Anchored Output",
+      "summary": "Fill the per-mode output template, separating verbatim NIST Subcategory and Action IDs from analysis, with provenance and decline pathways.",
+      "tags": [
+        "verbatim-citation",
+        "templates",
+        "provenance"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/nist-ai-rmf/references/templates/assessment.md"
+    },
+    {
+      "id": "flow:client-alert-action-extraction",
+      "type": "flow",
+      "name": "Client Alert Action Extraction",
+      "summary": "Extracts time-sensitive action items, deadlines, and obligations from client alerts, regulatory bulletins, or law-firm memos into a deadline-organized checklist with citations, distinguishing mandatory from recommended and informational items.",
+      "tags": [
+        "regulatory-alerts",
+        "deadlines",
+        "extraction"
+      ],
+      "complexity": "simple",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"what do we actually have to do, and by when?\" with the alert text",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:client-alert-action-extraction:parse-alert-scope",
+      "type": "step",
+      "name": "Parse Alert Scope",
+      "summary": "Parse the alert's jurisdiction, regulator, affected entities, and effective dates.",
+      "tags": [
+        "parsing",
+        "scope"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/action-items-from-client-alert/SKILL.md"
+    },
+    {
+      "id": "step:client-alert-action-extraction:extract-obligations-and-deadlines",
+      "type": "step",
+      "name": "Extract Obligations and Deadlines",
+      "summary": "Extract obligations and deadlines using the linguistic extraction-pattern catalog.",
+      "tags": [
+        "extraction",
+        "patterns"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/action-items-from-client-alert/reference/extraction_patterns.md"
+    },
+    {
+      "id": "step:client-alert-action-extraction:classify-mandatory-vs-recommended",
+      "type": "step",
+      "name": "Classify Mandatory vs Recommended",
+      "summary": "Classify each item as mandatory, recommended, or informational.",
+      "tags": [
+        "classification"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/action-items-from-client-alert/SKILL.md"
+    },
+    {
+      "id": "step:client-alert-action-extraction:calibrate-deadline-buckets",
+      "type": "step",
+      "name": "Calibrate Deadline Buckets",
+      "summary": "Bucket extracted deadlines relative to the review date using the deadline-calibration reference.",
+      "tags": [
+        "deadlines",
+        "calibration"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/action-items-from-client-alert/reference/deadline_calibration.md"
+    },
+    {
+      "id": "step:client-alert-action-extraction:deliver-deadline-checklist",
+      "type": "step",
+      "name": "Deliver Deadline Checklist",
+      "summary": "Deliver the deadline-organized checklist with citations back to the alert text.",
+      "tags": [
+        "checklist",
+        "citations"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/action-items-from-client-alert/examples/example_clear_alert.md"
+    },
+    {
+      "id": "flow:local-first-workspace-audit",
+      "type": "flow",
+      "name": "Local-First Workspace Audit",
+      "summary": "Audit checklist for local-first legal AI workspaces handling confidential documents: workspace boundary, every network path including BYOK model-provider calls, user control, a disclosure note on what leaves the machine, and failure modes.",
+      "tags": [
+        "confidentiality",
+        "local-first",
+        "security-audit",
+        "byok"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"audit whether this desktop legal app is really local-first\" with app code or README evidence",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:local-first-workspace-audit:define-workspace-boundary",
+      "type": "step",
+      "name": "Define Workspace Boundary",
+      "summary": "Define the workspace boundary: which components, stores, and processes count as inside the confidential perimeter.",
+      "tags": [
+        "boundary",
+        "scoping"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/local-first-legal-workspace/SKILL.md"
+    },
+    {
+      "id": "step:local-first-workspace-audit:map-network-paths",
+      "type": "step",
+      "name": "Map Network Paths",
+      "summary": "Map every network path out of the workspace, including BYOK model-provider calls, per the local-first reference model.",
+      "tags": [
+        "network-map",
+        "byok"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/local-first-legal-workspace/references/local-first-model.md"
+    },
+    {
+      "id": "step:local-first-workspace-audit:confirm-user-control",
+      "type": "step",
+      "name": "Confirm User Control",
+      "summary": "Confirm the user controls storage, keys, and egress rather than the vendor.",
+      "tags": [
+        "user-control"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/local-first-legal-workspace/SKILL.md"
+    },
+    {
+      "id": "step:local-first-workspace-audit:prepare-disclosure-note",
+      "type": "step",
+      "name": "Prepare Disclosure Note",
+      "summary": "Prepare a disclosure note stating exactly what data leaves the machine, to whom, and when.",
+      "tags": [
+        "disclosure"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/local-first-legal-workspace/SKILL.md"
+    },
+    {
+      "id": "step:local-first-workspace-audit:review-failure-modes",
+      "type": "step",
+      "name": "Review Failure Modes",
+      "summary": "Review failure modes with confidence bands and report the audit verdict.",
+      "tags": [
+        "failure-modes",
+        "confidence-bands"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/local-first-legal-workspace/examples/output.md"
+    },
+    {
+      "id": "flow:uk-pre-filing-citation-audit",
+      "type": "flow",
+      "name": "UK Pre-Filing Citation Audit",
+      "summary": "Pre-filing audit of UK authorities: verifies neutral citations, party names, paragraph references, and quoted passages against Find Case Law and BAILII to catch hallucinated or mangled authorities, with escalation for Scotland/NI/tribunal materials.",
+      "tags": [
+        "uk",
+        "citation-verification",
+        "pre-filing"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"verify the citations in this skeleton argument before filing\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:uk-pre-filing-citation-audit:extract-citations-from-draft",
+      "type": "step",
+      "name": "Extract Citations From Draft",
+      "summary": "Extract every cited authority — neutral citations, law-report references, quoted passages — from the draft.",
+      "tags": [
+        "extraction",
+        "citations"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-citation-verification/SKILL.md"
+    },
+    {
+      "id": "step:uk-pre-filing-citation-audit:verify-against-find-case-law",
+      "type": "step",
+      "name": "Verify Against Find Case Law",
+      "summary": "Verify each citation against Find Case Law as the primary public authority source.",
+      "tags": [
+        "find-case-law",
+        "verification"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-citation-verification/SKILL.md"
+    },
+    {
+      "id": "step:uk-pre-filing-citation-audit:fall-back-to-bailii",
+      "type": "step",
+      "name": "Fall Back to BAILII",
+      "summary": "Fall back to BAILII for authorities not on Find Case Law, separating existence, text access, and use-in-argument per the resolution model.",
+      "tags": [
+        "bailii",
+        "fallback"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-citation-verification/references/citation-resolution-model.md"
+    },
+    {
+      "id": "step:uk-pre-filing-citation-audit:check-names-paragraphs-quotes",
+      "type": "step",
+      "name": "Check Names, Paragraphs, Quotes",
+      "summary": "Check party names, paragraph references, and quoted passages against the retrieved judgment text.",
+      "tags": [
+        "quotes",
+        "pinpoint-check"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/uk-citation-verification/SKILL.md"
+    },
+    {
+      "id": "step:uk-pre-filing-citation-audit:grade-confidence-and-escalate",
+      "type": "step",
+      "name": "Grade Confidence and Escalate",
+      "summary": "Grade each authority with confidence bands and escalate Scotland, Northern Ireland, and tribunal materials the sources do not cover; never verify from memory.",
+      "tags": [
+        "confidence-bands",
+        "escalation"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-citation-verification/SKILL.md"
+    },
+    {
+      "id": "step:uk-pre-filing-citation-audit:emit-citation-status-table",
+      "type": "step",
+      "name": "Emit Citation Status Table",
+      "summary": "Emit the citation status table recording each authority's verification outcome.",
+      "tags": [
+        "report",
+        "status-table"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-citation-verification/examples/output.md"
+    },
+    {
+      "id": "flow:proposition-support-check",
+      "type": "flow",
+      "name": "Proposition Support Check",
+      "summary": "Checks whether cited cases, statutes, exhibits, transcripts, emails, or pleadings actually support the propositions asserted in a draft — targeting citation misuse and overstatement rather than mere existence — and grades support with confidence bands.",
+      "tags": [
+        "proposition-checking",
+        "overstatement",
+        "support-grading"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"do the authorities in this draft actually say what we claim they say?\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:proposition-support-check:inventory-propositions-and-sources",
+      "type": "step",
+      "name": "Inventory Propositions and Sources",
+      "summary": "Inventory each proposition asserted in the draft and the source cited for it.",
+      "tags": [
+        "inventory",
+        "propositions"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/proposition-checking/SKILL.md"
+    },
+    {
+      "id": "step:proposition-support-check:obtain-source-text-or-refuse",
+      "type": "step",
+      "name": "Obtain Source Text or Refuse",
+      "summary": "Obtain the source text; refuse to assess from model memory when no source is available.",
+      "tags": [
+        "source-grounding",
+        "refusal-rules"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/proposition-checking/SKILL.md"
+    },
+    {
+      "id": "step:proposition-support-check:classify-proposition-types",
+      "type": "step",
+      "name": "Classify Proposition Types",
+      "summary": "Classify each proposition (legal rule, case outcome, factual claim, and so on) per the proposition-checking model.",
+      "tags": [
+        "classification",
+        "model"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/proposition-checking/references/proposition-checking-model.md"
+    },
+    {
+      "id": "step:proposition-support-check:grade-support-with-bands",
+      "type": "step",
+      "name": "Grade Support With Bands",
+      "summary": "Grade each proposition supported, partially supported, or unsupported with confidence bands and escalation rules for misuse.",
+      "tags": [
+        "support-grading",
+        "confidence-bands"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/proposition-checking/SKILL.md"
+    },
+    {
+      "id": "step:proposition-support-check:deliver-support-table",
+      "type": "step",
+      "name": "Deliver Support Table",
+      "summary": "Deliver the proposition-by-proposition support table for the drafting lawyer.",
+      "tags": [
+        "report",
+        "support-table"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/proposition-checking/examples/output.md"
+    },
+    {
+      "id": "flow:singapore-citation-check",
+      "type": "flow",
+      "name": "Singapore Citation Check",
+      "summary": "Verifies Singapore court citations in legal submissions against eLitigation, detecting hallucinated cases in AI-generated text, with confidence bands and SG-practice escalation rules.",
+      "tags": [
+        "singapore",
+        "citation-verification",
+        "elitigation"
+      ],
+      "complexity": "simple",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"check the SG citations in this submission\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:singapore-citation-check:extract-sg-citations",
+      "type": "step",
+      "name": "Extract SG Citations",
+      "summary": "Extract Singapore court citations from the submission text.",
+      "tags": [
+        "extraction"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/sgcite/SKILL.md"
+    },
+    {
+      "id": "step:singapore-citation-check:verify-against-elitigation",
+      "type": "step",
+      "name": "Verify Against eLitigation",
+      "summary": "Verify each citation against eLitigation as the authoritative source.",
+      "tags": [
+        "elitigation",
+        "verification"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/sgcite/SKILL.md"
+    },
+    {
+      "id": "step:singapore-citation-check:flag-hallucinated-authorities",
+      "type": "step",
+      "name": "Flag Hallucinated Authorities",
+      "summary": "Flag citations that do not resolve as likely hallucinated authorities.",
+      "tags": [
+        "hallucination-detection"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/sgcite/SKILL.md"
+    },
+    {
+      "id": "step:singapore-citation-check:report-with-confidence-and-escalation",
+      "type": "step",
+      "name": "Report With Confidence and Escalation",
+      "summary": "Report results in the defined output format with confidence bands and escalation rules for SG practice.",
+      "tags": [
+        "report",
+        "confidence-bands"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/sgcite/SKILL.md"
+    },
+    {
+      "id": "flow:sg-statutory-reference-audit",
+      "type": "flow",
+      "name": "SG Statutory Reference Audit",
+      "summary": "Audits statutory citations in legal and Word documents via a Legal-BERT/BM25/ChromaDB retrieval backend, validating each reference as valid, amended, repealed, or not found, surfaced through a Word add-in.",
+      "tags": [
+        "singapore",
+        "statutory-citation",
+        "retrieval"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"audit the statutory references in this document\" (Word add-in workflow)",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:sg-statutory-reference-audit:parse-statutory-references",
+      "type": "step",
+      "name": "Parse Statutory References",
+      "summary": "Parse statutory references out of the legal or Word document.",
+      "tags": [
+        "parsing"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/bart-statutory-reference-checker/SKILL.md"
+    },
+    {
+      "id": "step:sg-statutory-reference-audit:retrieve-candidate-provisions",
+      "type": "step",
+      "name": "Retrieve Candidate Provisions",
+      "summary": "Retrieve candidate provisions through the Legal-BERT/BM25/ChromaDB backend.",
+      "tags": [
+        "retrieval",
+        "legal-bert"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/bart-statutory-reference-checker/SKILL.md"
+    },
+    {
+      "id": "step:sg-statutory-reference-audit:classify-reference-status",
+      "type": "step",
+      "name": "Classify Reference Status",
+      "summary": "Classify each reference valid, amended, repealed, or not found.",
+      "tags": [
+        "classification",
+        "status"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/bart-statutory-reference-checker/SKILL.md"
+    },
+    {
+      "id": "step:sg-statutory-reference-audit:surface-results-in-word-add-in",
+      "type": "step",
+      "name": "Surface Results in Word Add-In",
+      "summary": "Surface per-reference verdicts to the drafter through the Word add-in.",
+      "tags": [
+        "word-add-in",
+        "report"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/bart-statutory-reference-checker/SKILL.md"
+    },
+    {
+      "id": "flow:statutory-first-pass-analysis",
+      "type": "flow",
+      "name": "Statutory First-Pass Analysis",
+      "summary": "First-pass framework for reading US federal, state, and local statutes: definitions-first reading, operator words, canons of construction, requirement and exemption analysis, preemption and multi-state handling, and enforcement analysis — producing draft analysis for attorney review.",
+      "tags": [
+        "statutory-interpretation",
+        "us-law",
+        "canons"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"what does this statute actually require of us?\" with the statutory text",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:statutory-first-pass-analysis:read-definitions-first",
+      "type": "step",
+      "name": "Read Definitions First",
+      "summary": "Start with the definitions section, since defined terms control everything that follows.",
+      "tags": [
+        "definitions",
+        "reading-order"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/statutory-analysis/SKILL.md"
+    },
+    {
+      "id": "step:statutory-first-pass-analysis:map-statutory-structure",
+      "type": "step",
+      "name": "Map Statutory Structure",
+      "summary": "Map how the statute is organized — hierarchy, architecture, and section-type reading strategies.",
+      "tags": [
+        "structure",
+        "architecture"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/statutory-analysis/references/statutory_structure.md"
+    },
+    {
+      "id": "step:statutory-first-pass-analysis:parse-operator-words",
+      "type": "step",
+      "name": "Parse Operator Words",
+      "summary": "Parse operator words (shall, may, must, except) that carry the statute's obligations and permissions.",
+      "tags": [
+        "operators",
+        "obligations"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/statutory-analysis/SKILL.md"
+    },
+    {
+      "id": "step:statutory-first-pass-analysis:apply-canons-of-construction",
+      "type": "step",
+      "name": "Apply Canons of Construction",
+      "summary": "Apply textual canons such as ejusdem generis and noscitur a sociis where the text is ambiguous.",
+      "tags": [
+        "canons",
+        "interpretation"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/statutory-analysis/references/canons_of_construction.md"
+    },
+    {
+      "id": "step:statutory-first-pass-analysis:analyze-requirements-and-exemptions",
+      "type": "step",
+      "name": "Analyze Requirements and Exemptions",
+      "summary": "Separate the statute's affirmative requirements from its exemptions and analyze who is covered.",
+      "tags": [
+        "requirements",
+        "exemptions"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/statutory-analysis/SKILL.md"
+    },
+    {
+      "id": "step:statutory-first-pass-analysis:handle-preemption-and-multistate",
+      "type": "step",
+      "name": "Handle Preemption and Multi-State Issues",
+      "summary": "Handle preemption and multi-state questions, halting and routing to escalation where the analysis leaves first-pass scope.",
+      "tags": [
+        "preemption",
+        "multi-state",
+        "escalation"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/statutory-analysis/SKILL.md"
+    },
+    {
+      "id": "step:statutory-first-pass-analysis:draft-analysis-for-attorney-review",
+      "type": "step",
+      "name": "Draft Analysis for Attorney Review",
+      "summary": "Produce the templated draft analysis explicitly framed for attorney review; non-US law is out of scope.",
+      "tags": [
+        "output-template",
+        "attorney-review"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/statutory-analysis/SKILL.md"
+    },
+    {
+      "id": "flow:coquill-document-assembly",
+      "type": "flow",
+      "name": "CoQuill Document Assembly",
+      "summary": "Seven-phase template-driven assembly: template discovery, analyzer-generated manifest, conversational variable interview, confirmation and validation, rendering to docx/html/md with a mandatory draft-requires-legal-review notice, and an audit-trail transcript.",
+      "tags": [
+        "document-assembly",
+        "templates",
+        "multi-agent",
+        "jinja2"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: trigger phrases like \"draft an NDA from the Bonterms template\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:coquill-document-assembly:discover-template",
+      "type": "step",
+      "name": "Discover Template",
+      "summary": "Match the user request to a template in the library (docx, HTML, or markdown packs such as the Bonterms Mutual NDA).",
+      "tags": [
+        "template-discovery"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/coquill/SKILL.md"
+    },
+    {
+      "id": "step:coquill-document-assembly:analyze-template-manifest",
+      "type": "step",
+      "name": "Analyze Template Into Manifest",
+      "summary": "Run the analyzer sub-agent: analyze.py scans Jinja2 variables, conditionals, and loops in document order and writes a typed manifest.yaml with gate dependencies.",
+      "tags": [
+        "analyzer",
+        "manifest",
+        "script"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/coquill/analyzer/analyze.py"
+    },
+    {
+      "id": "step:coquill-document-assembly:conduct-variable-interview",
+      "type": "step",
+      "name": "Conduct Variable Interview",
+      "summary": "Interview the user conversationally for each manifest variable, respecting gates, loops, and the advanced interview patterns.",
+      "tags": [
+        "interview",
+        "variables"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/coquill/advanced_interview.md"
+    },
+    {
+      "id": "step:coquill-document-assembly:confirm-and-validate-answers",
+      "type": "step",
+      "name": "Confirm and Validate Answers",
+      "summary": "Confirm collected values with the user and validate them against the manifest before rendering.",
+      "tags": [
+        "confirmation",
+        "validation"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/coquill/SKILL.md"
+    },
+    {
+      "id": "step:coquill-document-assembly:render-draft",
+      "type": "step",
+      "name": "Render Draft",
+      "summary": "Run the renderer sub-agent: render.py renders docx via docxtpl, HTML or markdown via Jinja2, with optional PDF conversion and boolean coercion.",
+      "tags": [
+        "renderer",
+        "docx",
+        "script"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/coquill/renderer/render.py"
+    },
+    {
+      "id": "step:coquill-document-assembly:validate-rendered-output",
+      "type": "step",
+      "name": "Validate Rendered Output",
+      "summary": "Validate the rendered document for unfilled {{ placeholder }} expressions and leftover control tags across body, tables, headers, and footers.",
+      "tags": [
+        "placeholder-validation",
+        "quality-gate"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/coquill/renderer/render.py"
+    },
+    {
+      "id": "step:coquill-document-assembly:generate-session-transcript",
+      "type": "step",
+      "name": "Generate Session Transcript",
+      "summary": "Run the transcriber sub-agent: transcribe.py converts interview_log.json plus the manifest into a human-readable audit-trail transcript.",
+      "tags": [
+        "transcript",
+        "audit-trail",
+        "script"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/coquill/transcriber/transcribe.py"
+    },
+    {
+      "id": "flow:collate-reviewer-feedback",
+      "type": "flow",
+      "name": "Collate Reviewer Feedback",
+      "summary": "Collates comments, tracked changes, and redlines from multiple reviewer DOCX drafts into a grouped resolution checklist, flagging conflicts and high-risk items without ever auto-merging documents.",
+      "tags": [
+        "track-changes",
+        "review-workflow",
+        "docx"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"collate the partner, client, and counsel markups on this draft\" with the master DOCX plus reviewer copies",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:collate-reviewer-feedback:gather-reviewer-drafts",
+      "type": "step",
+      "name": "Gather Reviewer Drafts",
+      "summary": "Gather the master DOCX and each reviewer's marked-up copy.",
+      "tags": [
+        "intake",
+        "docx"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/collating-reviewer-feedback/SKILL.md"
+    },
+    {
+      "id": "step:collate-reviewer-feedback:extract-markup-units",
+      "type": "step",
+      "name": "Extract Markup Units",
+      "summary": "Extract comments, insertions, deletions, and replacements from each draft per the reviewer-markup model.",
+      "tags": [
+        "extraction",
+        "markup"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/collating-reviewer-feedback/references/reviewer-markup-model.md"
+    },
+    {
+      "id": "step:collate-reviewer-feedback:group-into-resolution-units",
+      "type": "step",
+      "name": "Group Into Resolution Units",
+      "summary": "Group overlapping markups into resolution units anchored to document locations.",
+      "tags": [
+        "grouping",
+        "resolution-units"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/collating-reviewer-feedback/references/reviewer-markup-model.md"
+    },
+    {
+      "id": "step:collate-reviewer-feedback:flag-conflicts-and-high-risk",
+      "type": "step",
+      "name": "Flag Conflicts and High-Risk Items",
+      "summary": "Flag conflicting reviewer instructions and high-risk items needing manual decisions.",
+      "tags": [
+        "conflicts",
+        "risk"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/collating-reviewer-feedback/SKILL.md"
+    },
+    {
+      "id": "step:collate-reviewer-feedback:deliver-resolution-checklist",
+      "type": "step",
+      "name": "Deliver Resolution Checklist",
+      "summary": "Deliver the grouped resolution checklist; the skill never auto-merges the documents.",
+      "tags": [
+        "checklist",
+        "no-auto-merge"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/collating-reviewer-feedback/examples/output.md"
+    },
+    {
+      "id": "flow:batch-playbook-redlining",
+      "type": "flow",
+      "name": "Batch Playbook Redlining",
+      "summary": "Batch contract redlining for UK commercial practice via the Vibe Legal FastAPI server: playbook-driven AMEND/INSERT/DELETE operations applied as native Word tracked changes to up to 5 DOCX contracts per run through BYOK Gemini, with mandatory per-change lawyer review.",
+      "tags": [
+        "redlining",
+        "batch",
+        "uk-law",
+        "byok"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"redline these contracts against our playbook\" with up to 5 DOCX files",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:batch-playbook-redlining:load-playbook-and-contracts",
+      "type": "step",
+      "name": "Load Playbook and Contracts",
+      "summary": "Load the negotiation playbook and up to 5 DOCX contracts for the batch run.",
+      "tags": [
+        "playbook",
+        "intake"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/vibe-legal-batch-redliner/SKILL.md"
+    },
+    {
+      "id": "step:batch-playbook-redlining:confirm-privilege-and-byok-warnings",
+      "type": "step",
+      "name": "Confirm Privilege and BYOK Warnings",
+      "summary": "Surface the explicit privilege/confidentiality warnings and confirm the BYOK Gemini configuration before any content leaves.",
+      "tags": [
+        "privilege",
+        "byok"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/vibe-legal-batch-redliner/SKILL.md"
+    },
+    {
+      "id": "step:batch-playbook-redlining:generate-amend-insert-delete-ops",
+      "type": "step",
+      "name": "Generate AMEND/INSERT/DELETE Operations",
+      "summary": "Generate playbook-driven AMEND, INSERT, and DELETE operations for each contract.",
+      "tags": [
+        "operations",
+        "playbook-driven"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/vibe-legal-batch-redliner/SKILL.md"
+    },
+    {
+      "id": "step:batch-playbook-redlining:apply-native-tracked-changes",
+      "type": "step",
+      "name": "Apply Native Tracked Changes",
+      "summary": "Apply the operations as native Word tracked changes through the Vibe Legal FastAPI server.",
+      "tags": [
+        "tracked-changes",
+        "fastapi"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/vibe-legal-batch-redliner/SKILL.md"
+    },
+    {
+      "id": "step:batch-playbook-redlining:require-per-change-lawyer-review",
+      "type": "step",
+      "name": "Require Per-Change Lawyer Review",
+      "summary": "Hand the redlined documents to a lawyer for mandatory per-change review before any change is accepted.",
+      "tags": [
+        "lawyer-review",
+        "guardrail"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/vibe-legal-batch-redliner/SKILL.md"
+    },
+    {
+      "id": "flow:legal-translation",
+      "type": "flow",
+      "name": "Legal Translation",
+      "summary": "Translates legal documents across any language pair by translating legal effect rather than literal words: document-type classification, pre-translation glossary build, four-layer translation, per-language conventions with strict proper-noun and date rules, and a translator's-notes delegation gate.",
+      "tags": [
+        "legal-translation",
+        "multilingual",
+        "legal-effect"
+      ],
+      "complexity": "complex",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"translate this contract into Hindi preserving legal effect\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:legal-translation:classify-document-type",
+      "type": "step",
+      "name": "Classify Document Type",
+      "summary": "Classify the document against the twelve-type library (contracts, affidavits, powers of attorney, court orders...) to set translation expectations.",
+      "tags": [
+        "classification",
+        "document-types"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/legal-translation/references/document-type-library.md"
+    },
+    {
+      "id": "step:legal-translation:build-pre-translation-glossary",
+      "type": "step",
+      "name": "Build Pre-Translation Glossary",
+      "summary": "Build the glossary for the language pair from the cross-language legal-term reference before translating.",
+      "tags": [
+        "glossary",
+        "terminology"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/legal-translation/references/legal-glossary.md"
+    },
+    {
+      "id": "step:legal-translation:translate-legal-effect",
+      "type": "step",
+      "name": "Translate Legal Effect",
+      "summary": "Translate through the four-layer model, preserving legal effect over literal wording.",
+      "tags": [
+        "four-layer-model",
+        "legal-effect"
+      ],
+      "complexity": "complex",
+      "filePath": "skills/legal-translation/SKILL.md"
+    },
+    {
+      "id": "step:legal-translation:apply-language-conventions",
+      "type": "step",
+      "name": "Apply Language Conventions",
+      "summary": "Apply per-language legal drafting conventions plus strict proper-noun, date, and transliteration rules.",
+      "tags": [
+        "conventions",
+        "transliteration"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/legal-translation/references/legal-language-conventions.md"
+    },
+    {
+      "id": "step:legal-translation:attach-translator-notes-and-escalate",
+      "type": "step",
+      "name": "Attach Translator Notes and Escalate",
+      "summary": "Attach translator's notes through the delegation gate, with confidence bands and escalation triggers for unresolvable terms.",
+      "tags": [
+        "translator-notes",
+        "confidence-bands"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/legal-translation/SKILL.md"
+    },
+    {
+      "id": "flow:plain-language-rewrite",
+      "type": "flow",
+      "name": "Plain-Language Rewrite",
+      "summary": "Rewrites existing legal-jargon-heavy text into plain language for a specified non-legal audience, returning the rewrite plus an explanation of changes and preservation-of-meaning flags; it does not draft from scratch.",
+      "tags": [
+        "plain-language",
+        "communications",
+        "transformation"
+      ],
+      "complexity": "simple",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"rewrite this disclaimer so customers can understand it\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:plain-language-rewrite:calibrate-target-audience",
+      "type": "step",
+      "name": "Calibrate Target Audience",
+      "summary": "Calibrate the rewrite to the named audience — executive, operational, customer, or sales — per the audience reference.",
+      "tags": [
+        "audience",
+        "calibration"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/comms-improver/reference/audience_calibration.md"
+    },
+    {
+      "id": "step:plain-language-rewrite:apply-plain-language-patterns",
+      "type": "step",
+      "name": "Apply Plain-Language Patterns",
+      "summary": "Apply the transformation heuristics: split compound sentences, passive-to-active voice, jargon substitution.",
+      "tags": [
+        "patterns",
+        "heuristics"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/comms-improver/reference/legal_to_plain_patterns.md"
+    },
+    {
+      "id": "step:plain-language-rewrite:rewrite-preserving-meaning",
+      "type": "step",
+      "name": "Rewrite Preserving Meaning",
+      "summary": "Produce the plain-language rewrite of the existing text without drafting new substance.",
+      "tags": [
+        "rewrite"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/comms-improver/SKILL.md"
+    },
+    {
+      "id": "step:plain-language-rewrite:explain-changes-and-flag-risks",
+      "type": "step",
+      "name": "Explain Changes and Flag Risks",
+      "summary": "Return the explanation of changes and preservation-of-meaning flags alongside the rewrite.",
+      "tags": [
+        "explanation",
+        "meaning-flags"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/comms-improver/SKILL.md"
+    },
+    {
+      "id": "flow:author-new-skill",
+      "type": "flow",
+      "name": "Author New Skill",
+      "summary": "skill-creator guides an in-house lawyer through a focused conversation — purpose, triggers, inputs, outputs, edge cases — then produces a complete skill folder, propagating privilege guidance into every generated skill, with a wizard fallback for stalled sessions.",
+      "tags": [
+        "skill-authoring",
+        "meta-skill"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"help me build a skill for board minutes\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:author-new-skill:elicit-skill-requirements",
+      "type": "step",
+      "name": "Elicit Skill Requirements",
+      "summary": "Elicit purpose, triggers, inputs, outputs, and edge cases through a focused conversation with the lawyer.",
+      "tags": [
+        "elicitation",
+        "conversation"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/skill-creator/SKILL.md"
+    },
+    {
+      "id": "step:author-new-skill:fall-back-to-wizard-mode",
+      "type": "step",
+      "name": "Fall Back to Wizard Mode",
+      "summary": "Switch to the structured wizard when the conversation stalls or the user disengages.",
+      "tags": [
+        "wizard",
+        "fallback"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/skill-creator/reference/wizard_mode.md"
+    },
+    {
+      "id": "step:author-new-skill:craft-trigger-description",
+      "type": "step",
+      "name": "Craft Trigger Description",
+      "summary": "Craft the frontmatter description with the \"Use when...\" trigger pattern so the skill fires accurately.",
+      "tags": [
+        "frontmatter",
+        "triggers"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/skill-creator/reference/description_field.md"
+    },
+    {
+      "id": "step:author-new-skill:generate-skill-folder",
+      "type": "step",
+      "name": "Generate Skill Folder",
+      "summary": "Generate the complete skill folder in the required SKILL.md-plus-references format, propagating privilege guidance throughout.",
+      "tags": [
+        "generation",
+        "privilege"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/skill-creator/SKILL.md"
+    },
+    {
+      "id": "step:author-new-skill:optionally-enable-self-improvement",
+      "type": "step",
+      "name": "Optionally Enable Self-Improvement",
+      "summary": "Insert the verbatim self-improvement template when the skill opts in via self_improvement: true.",
+      "tags": [
+        "self-improvement",
+        "template"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/skill-creator/reference/self_improvement.md"
+    },
+    {
+      "id": "flow:run-behavioral-evals",
+      "type": "flow",
+      "name": "Run Behavioral Evals",
+      "summary": "Lightweight behavioral prompt evals for prose skills: per-skill evals.yaml files define scenarios with expected source modes and required elements, pasted into an Agent Skills harness, with hard fails for verifying from memory or predicting legal outcomes.",
+      "tags": [
+        "evals",
+        "behavioral-testing",
+        "prose-skills"
+      ],
+      "complexity": "simple",
+      "domainMeta": {
+        "entryPoint": "Manual eval run per evals/README.md against a skill's evals.yaml",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:run-behavioral-evals:define-eval-scenarios",
+      "type": "step",
+      "name": "Define Eval Scenarios",
+      "summary": "Define per-skill scenarios in evals.yaml with expected source modes (live_source, user_supplied_source, no_source).",
+      "tags": [
+        "scenarios",
+        "evals-yaml"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/uk-citation-verification/evals.yaml"
+    },
+    {
+      "id": "step:run-behavioral-evals:run-scenarios-in-harness",
+      "type": "step",
+      "name": "Run Scenarios in Harness",
+      "summary": "Paste each scenario prompt into an Agent Skills harness with the skill installed.",
+      "tags": [
+        "harness",
+        "execution"
+      ],
+      "complexity": "simple",
+      "filePath": "evals/README.md"
+    },
+    {
+      "id": "step:run-behavioral-evals:assert-required-elements",
+      "type": "step",
+      "name": "Assert Required Elements",
+      "summary": "Check the output contains each scenario's required elements, such as named sources and confidence bands.",
+      "tags": [
+        "assertions",
+        "required-elements"
+      ],
+      "complexity": "simple",
+      "filePath": "evals/README.md"
+    },
+    {
+      "id": "step:run-behavioral-evals:enforce-hard-fail-conditions",
+      "type": "step",
+      "name": "Enforce Hard-Fail Conditions",
+      "summary": "Fail the eval outright on hard conditions: verifying from model memory or predicting legal outcomes.",
+      "tags": [
+        "hard-fails",
+        "guardrails"
+      ],
+      "complexity": "simple",
+      "filePath": "evals/README.md"
+    },
+    {
+      "id": "flow:run-deterministic-tests",
+      "type": "flow",
+      "name": "Run Deterministic Script Tests",
+      "summary": "The stdlib-only unittest suite pinning the privacy navigator script engine: run_all.py discovers every test module and exits non-zero on failure, covering applicability thresholds, citation auditing, conflict resolution, precedent ranking, and enforcement-corpus integrity.",
+      "tags": [
+        "unit-tests",
+        "deterministic",
+        "ci"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "python skills/us-state-privacy-navigator/tests/run_all.py",
+        "entryType": "cli"
+      }
+    },
+    {
+      "id": "step:run-deterministic-tests:discover-test-modules",
+      "type": "step",
+      "name": "Discover Test Modules",
+      "summary": "run_all.py discovers all test_*.py modules via stdlib unittest discovery and exits non-zero on any failure, with no dependencies.",
+      "tags": [
+        "discovery",
+        "runner"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/us-state-privacy-navigator/tests/run_all.py"
+    },
+    {
+      "id": "step:run-deterministic-tests:test-applicability-thresholds",
+      "type": "step",
+      "name": "Test Applicability Thresholds",
+      "summary": "Run canonical intake fixtures (sub-threshold startup, California-only mid-market, multistate enterprise) through the threshold engine and assert per-state verdicts.",
+      "tags": [
+        "fixtures",
+        "thresholds"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/tests/test_applicability_check.py"
+    },
+    {
+      "id": "step:run-deterministic-tests:test-citation-audit",
+      "type": "step",
+      "name": "Test Citation Audit",
+      "summary": "Assert the clean memo fixture passes, planted errors and implausible code sections are flagged, and shipped reference docs stay audit-clean.",
+      "tags": [
+        "citation-audit",
+        "fixtures"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/tests/test_citation_audit.py"
+    },
+    {
+      "id": "step:run-deterministic-tests:test-conflict-resolution",
+      "type": "step",
+      "name": "Test Conflict Resolution",
+      "summary": "Pin synthesis correctness: controlling-state selection (Maryland versus California), dimension filtering, and single-state synthesis.",
+      "tags": [
+        "conflict-resolver",
+        "synthesis"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/tests/test_conflict_resolver.py"
+    },
+    {
+      "id": "step:run-deterministic-tests:test-precedent-and-corpus-integrity",
+      "type": "step",
+      "name": "Test Precedent Ranking and Corpus Integrity",
+      "summary": "Pin ranking order for canonical gap queries and enforce thirteen schema/taxonomy invariants over the enforcement-action corpus.",
+      "tags": [
+        "precedent-match",
+        "corpus-integrity"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/us-state-privacy-navigator/tests/test_precedent_match.py"
+    },
+    {
+      "id": "flow:adversarial-qc-certificate",
+      "type": "flow",
+      "name": "Adversarial QC Certificate",
+      "summary": "Adversarial quality control of AI deliverables: two verification agents independently check the deliverable against a configurable checklist at quick/standard/deep depth, agreement yields confidence, disagreement is flagged, and a pass/fail/review QC certificate is emitted with evidence.",
+      "tags": [
+        "multi-agent",
+        "verification",
+        "certificate"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Skill invocation: \"run adversarial QC on this deliverable before it goes out\"",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:adversarial-qc-certificate:configure-depth-and-mode",
+      "type": "step",
+      "name": "Configure Depth and Mode",
+      "summary": "Configure review depth (quick/standard/deep) and single-model versus cross-model agent mode.",
+      "tags": [
+        "configuration",
+        "depth"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/adversarial-qc/references/config.md"
+    },
+    {
+      "id": "step:adversarial-qc-certificate:select-qc-checklist",
+      "type": "step",
+      "name": "Select QC Checklist",
+      "summary": "Select the layered core/extended/deep checklist tier, applying project-level .qc-checklist.md overrides where present.",
+      "tags": [
+        "checklist",
+        "overrides"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/adversarial-qc/references/checklist.md"
+    },
+    {
+      "id": "step:adversarial-qc-certificate:spawn-two-verification-agents",
+      "type": "step",
+      "name": "Spawn Two Verification Agents",
+      "summary": "Spawn two verification agents to independently check the deliverable against the checklist.",
+      "tags": [
+        "multi-agent",
+        "verification"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/adversarial-qc/SKILL.md"
+    },
+    {
+      "id": "step:adversarial-qc-certificate:compare-agent-findings",
+      "type": "step",
+      "name": "Compare Agent Findings",
+      "summary": "Compare the agents' findings: agreement yields confidence, disagreement is flagged for human review.",
+      "tags": [
+        "agreement",
+        "human-review"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/adversarial-qc/SKILL.md"
+    },
+    {
+      "id": "step:adversarial-qc-certificate:emit-qc-certificate",
+      "type": "step",
+      "name": "Emit QC Certificate",
+      "summary": "Emit the pass/fail/review QC certificate with evidence, using the HTML certificate template with PDF conversion.",
+      "tags": [
+        "certificate",
+        "evidence"
+      ],
+      "complexity": "simple",
+      "filePath": "skills/adversarial-qc/references/certificate-template.md"
+    },
+    {
+      "id": "flow:contribute-skill-to-registry",
+      "type": "flow",
+      "name": "Contribute Skill to Registry",
+      "summary": "The governance pipeline for a multi-author registry: fork-and-PR in the required SKILL.md-plus-references format, the higher claim/draft/attest/review/merge bar for legal-substance skills, PR-readiness content hygiene and harness install checks, and access-mode declarations.",
+      "tags": [
+        "governance",
+        "contribution",
+        "process"
+      ],
+      "complexity": "moderate",
+      "domainMeta": {
+        "entryPoint": "Fork-and-PR per CONTRIBUTING.md",
+        "entryType": "manual"
+      }
+    },
+    {
+      "id": "step:contribute-skill-to-registry:fork-and-draft-skill",
+      "type": "step",
+      "name": "Fork and Draft Skill",
+      "summary": "Fork the registry and draft the skill in the required SKILL.md-plus-references format under the practitioner-built philosophy.",
+      "tags": [
+        "fork",
+        "format"
+      ],
+      "complexity": "simple",
+      "filePath": "CONTRIBUTING.md"
+    },
+    {
+      "id": "step:contribute-skill-to-registry:attest-legal-substance",
+      "type": "step",
+      "name": "Attest Legal Substance",
+      "summary": "For skills carrying legal content, follow the five-step claim/draft/attest/review/merge process with its higher review bar.",
+      "tags": [
+        "attestation",
+        "legal-substance"
+      ],
+      "complexity": "moderate",
+      "filePath": "skills/CONTRIBUTING.md"
+    },
+    {
+      "id": "step:contribute-skill-to-registry:run-pr-readiness-checks",
+      "type": "step",
+      "name": "Run PR-Readiness Checks",
+      "summary": "Run the pre-PR checklist: content hygiene (no firm, client, or personal names), behaviour checks, and install checks across harnesses.",
+      "tags": [
+        "hygiene",
+        "pr-checklist"
+      ],
+      "complexity": "simple",
+      "filePath": "PR-READINESS.md"
+    },
+    {
+      "id": "step:contribute-skill-to-registry:declare-access-modes",
+      "type": "step",
+      "name": "Declare Access Modes",
+      "summary": "Declare how the skill obtains source materials across harnesses and never assume tool or credential access.",
+      "tags": [
+        "access-modes",
+        "portability"
+      ],
+      "complexity": "simple",
+      "filePath": "ACCESS-MODES.md"
+    },
+    {
+      "id": "step:contribute-skill-to-registry:merge-and-register",
+      "type": "step",
+      "name": "Merge and Register",
+      "summary": "Merge via PR and record the skill in the root README author/jurisdiction registry table with install instructions.",
+      "tags": [
+        "merge",
+        "registry"
+      ],
+      "complexity": "simple",
+      "filePath": "README.md"
+    }
+  ],
+  "edges": [
+    {
+      "source": "domain:litigation-document-review",
+      "target": "flow:uk-particulars-of-claim-review",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:uk-particulars-of-claim-review",
+      "target": "step:uk-particulars-of-claim-review:confirm-claim-context",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:uk-particulars-of-claim-review",
+      "target": "step:uk-particulars-of-claim-review:build-element-map",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:uk-particulars-of-claim-review",
+      "target": "step:uk-particulars-of-claim-review:review-structure-against-cpr16",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:uk-particulars-of-claim-review",
+      "target": "step:uk-particulars-of-claim-review:surface-litigation-risks",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:uk-particulars-of-claim-review",
+      "target": "step:uk-particulars-of-claim-review:produce-confidence-banded-review",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:litigation-document-review",
+      "target": "flow:uk-witness-statement-review",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:uk-witness-statement-review",
+      "target": "step:uk-witness-statement-review:confirm-proceedings-context",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:uk-witness-statement-review",
+      "target": "step:uk-witness-statement-review:build-statement-map",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:uk-witness-statement-review",
+      "target": "step:uk-witness-statement-review:check-source-support",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:uk-witness-statement-review",
+      "target": "step:uk-witness-statement-review:flag-hearsay-and-argument",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:uk-witness-statement-review",
+      "target": "step:uk-witness-statement-review:report-with-confidence-bands",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:litigation-document-review",
+      "target": "flow:uk-disclosure-list-qc",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:uk-disclosure-list-qc",
+      "target": "step:uk-disclosure-list-qc:confirm-disclosure-context",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:uk-disclosure-list-qc",
+      "target": "step:uk-disclosure-list-qc:inventory-the-list",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:uk-disclosure-list-qc",
+      "target": "step:uk-disclosure-list-qc:check-issue-custodian-coverage",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:uk-disclosure-list-qc",
+      "target": "step:uk-disclosure-list-qc:review-inspection-privilege-flags",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:uk-disclosure-list-qc",
+      "target": "step:uk-disclosure-list-qc:identify-adverse-helpful-documents",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:uk-disclosure-list-qc",
+      "target": "step:uk-disclosure-list-qc:produce-qc-report",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:litigation-document-review",
+      "target": "flow:build-case-chronology",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:build-case-chronology",
+      "target": "step:build-case-chronology:define-chronology-scope",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:build-case-chronology",
+      "target": "step:build-case-chronology:extract-dated-events",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:build-case-chronology",
+      "target": "step:build-case-chronology:deduplicate-events",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:build-case-chronology",
+      "target": "step:build-case-chronology:identify-timeline-gaps",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:build-case-chronology",
+      "target": "step:build-case-chronology:emit-chronology-or-statement-of-facts",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:litigation-document-review",
+      "target": "flow:appellate-preference-check",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:appellate-preference-check",
+      "target": "step:appellate-preference-check:build-decision-corpus",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:appellate-preference-check",
+      "target": "step:appellate-preference-check:extract-preference-signals",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:appellate-preference-check",
+      "target": "step:appellate-preference-check:profile-the-draft",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:appellate-preference-check",
+      "target": "step:appellate-preference-check:compare-draft-to-signals",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:appellate-preference-check",
+      "target": "step:appellate-preference-check:report-without-outcome-prediction",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:contract-review",
+      "target": "flow:saas-msa-review",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:saas-msa-review",
+      "target": "step:saas-msa-review:confirm-perspective-and-mode",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:saas-msa-review",
+      "target": "step:saas-msa-review:run-seven-pass-review",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:saas-msa-review",
+      "target": "step:saas-msa-review:screen-saas-red-flags",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:saas-msa-review",
+      "target": "step:saas-msa-review:grade-finding-severity",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:saas-msa-review",
+      "target": "step:saas-msa-review:draft-redline-language",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:saas-msa-review",
+      "target": "step:saas-msa-review:check-msa-order-form-conflicts",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "flow:saas-msa-review",
+      "target": "step:saas-msa-review:report-severity-rated-findings",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "domain:contract-review",
+      "target": "flow:commercial-purchase-msa-review",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:commercial-purchase-msa-review",
+      "target": "step:commercial-purchase-msa-review:confirm-buyer-supplier-perspective",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:commercial-purchase-msa-review",
+      "target": "step:commercial-purchase-msa-review:run-seven-pass-review",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:commercial-purchase-msa-review",
+      "target": "step:commercial-purchase-msa-review:screen-purchase-red-flags",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:commercial-purchase-msa-review",
+      "target": "step:commercial-purchase-msa-review:grade-finding-severity",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:commercial-purchase-msa-review",
+      "target": "step:commercial-purchase-msa-review:draft-redlines-and-po-conflict-analysis",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:commercial-purchase-msa-review",
+      "target": "step:commercial-purchase-msa-review:report-findings",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:contract-review",
+      "target": "flow:nda-review",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:nda-review",
+      "target": "step:nda-review:confirm-recipient-or-discloser-perspective",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:nda-review",
+      "target": "step:nda-review:inspect-eight-key-clauses",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:nda-review",
+      "target": "step:nda-review:check-exceptions-duration-remedies",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:nda-review",
+      "target": "step:nda-review:grade-clause-risk",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:nda-review",
+      "target": "step:nda-review:deliver-summary-and-issue-log",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:contract-review",
+      "target": "flow:contract-qa",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:contract-qa",
+      "target": "step:contract-qa:classify-question-type",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:contract-qa",
+      "target": "step:contract-qa:locate-relevant-clauses",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:contract-qa",
+      "target": "step:contract-qa:answer-per-type-format",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:contract-qa",
+      "target": "step:contract-qa:cite-clauses-verbatim",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:contract-qa",
+      "target": "step:contract-qa:attach-confidence-and-refusals",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:contract-review",
+      "target": "flow:dpa-checklist-review",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:dpa-checklist-review",
+      "target": "step:dpa-checklist-review:determine-applicable-regime",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:dpa-checklist-review",
+      "target": "step:dpa-checklist-review:load-regime-requirements",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:dpa-checklist-review",
+      "target": "step:dpa-checklist-review:run-three-pass-review",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:dpa-checklist-review",
+      "target": "step:dpa-checklist-review:score-presence-and-severity",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:dpa-checklist-review",
+      "target": "step:dpa-checklist-review:deliver-checklist-with-gap-language",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:privacy-regulatory-compliance",
+      "target": "flow:multistate-privacy-assessment",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:multistate-privacy-assessment",
+      "target": "step:multistate-privacy-assessment:run-intake-questionnaire",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:multistate-privacy-assessment",
+      "target": "step:multistate-privacy-assessment:run-applicability-sweep",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:multistate-privacy-assessment",
+      "target": "step:multistate-privacy-assessment:determine-controller-processor-status",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:multistate-privacy-assessment",
+      "target": "step:multistate-privacy-assessment:synthesize-multistate-ceiling",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:multistate-privacy-assessment",
+      "target": "step:multistate-privacy-assessment:run-gap-analysis",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:multistate-privacy-assessment",
+      "target": "step:multistate-privacy-assessment:match-enforcement-precedent",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "flow:multistate-privacy-assessment",
+      "target": "step:multistate-privacy-assessment:audit-memo-citations",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "flow:multistate-privacy-assessment",
+      "target": "step:multistate-privacy-assessment:generate-docx-memo",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "domain:privacy-regulatory-compliance",
+      "target": "flow:vendor-privacy-policy-triage",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:vendor-privacy-policy-triage",
+      "target": "step:vendor-privacy-policy-triage:identify-regime-lens",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:vendor-privacy-policy-triage",
+      "target": "step:vendor-privacy-policy-triage:summarize-ten-policy-topics",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:vendor-privacy-policy-triage",
+      "target": "step:vendor-privacy-policy-triage:screen-red-flags-by-severity",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:vendor-privacy-policy-triage",
+      "target": "step:vendor-privacy-policy-triage:recommend-diligence-or-dpa-escalation",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "domain:privacy-regulatory-compliance",
+      "target": "flow:nist-ai-rmf-assessment",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:nist-ai-rmf-assessment",
+      "target": "step:nist-ai-rmf-assessment:select-engagement-mode",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:nist-ai-rmf-assessment",
+      "target": "step:nist-ai-rmf-assessment:route-reference-loading",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:nist-ai-rmf-assessment",
+      "target": "step:nist-ai-rmf-assessment:apply-core-functions",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:nist-ai-rmf-assessment",
+      "target": "step:nist-ai-rmf-assessment:overlay-genai-profile",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:nist-ai-rmf-assessment",
+      "target": "step:nist-ai-rmf-assessment:emit-verbatim-anchored-output",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:privacy-regulatory-compliance",
+      "target": "flow:client-alert-action-extraction",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:client-alert-action-extraction",
+      "target": "step:client-alert-action-extraction:parse-alert-scope",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:client-alert-action-extraction",
+      "target": "step:client-alert-action-extraction:extract-obligations-and-deadlines",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:client-alert-action-extraction",
+      "target": "step:client-alert-action-extraction:classify-mandatory-vs-recommended",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:client-alert-action-extraction",
+      "target": "step:client-alert-action-extraction:calibrate-deadline-buckets",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:client-alert-action-extraction",
+      "target": "step:client-alert-action-extraction:deliver-deadline-checklist",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:privacy-regulatory-compliance",
+      "target": "flow:local-first-workspace-audit",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:local-first-workspace-audit",
+      "target": "step:local-first-workspace-audit:define-workspace-boundary",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:local-first-workspace-audit",
+      "target": "step:local-first-workspace-audit:map-network-paths",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:local-first-workspace-audit",
+      "target": "step:local-first-workspace-audit:confirm-user-control",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:local-first-workspace-audit",
+      "target": "step:local-first-workspace-audit:prepare-disclosure-note",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:local-first-workspace-audit",
+      "target": "step:local-first-workspace-audit:review-failure-modes",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:citation-integrity",
+      "target": "flow:uk-pre-filing-citation-audit",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:uk-pre-filing-citation-audit",
+      "target": "step:uk-pre-filing-citation-audit:extract-citations-from-draft",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:uk-pre-filing-citation-audit",
+      "target": "step:uk-pre-filing-citation-audit:verify-against-find-case-law",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:uk-pre-filing-citation-audit",
+      "target": "step:uk-pre-filing-citation-audit:fall-back-to-bailii",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:uk-pre-filing-citation-audit",
+      "target": "step:uk-pre-filing-citation-audit:check-names-paragraphs-quotes",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:uk-pre-filing-citation-audit",
+      "target": "step:uk-pre-filing-citation-audit:grade-confidence-and-escalate",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:uk-pre-filing-citation-audit",
+      "target": "step:uk-pre-filing-citation-audit:emit-citation-status-table",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:citation-integrity",
+      "target": "flow:proposition-support-check",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:proposition-support-check",
+      "target": "step:proposition-support-check:inventory-propositions-and-sources",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:proposition-support-check",
+      "target": "step:proposition-support-check:obtain-source-text-or-refuse",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:proposition-support-check",
+      "target": "step:proposition-support-check:classify-proposition-types",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:proposition-support-check",
+      "target": "step:proposition-support-check:grade-support-with-bands",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:proposition-support-check",
+      "target": "step:proposition-support-check:deliver-support-table",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:citation-integrity",
+      "target": "flow:singapore-citation-check",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:singapore-citation-check",
+      "target": "step:singapore-citation-check:extract-sg-citations",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:singapore-citation-check",
+      "target": "step:singapore-citation-check:verify-against-elitigation",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:singapore-citation-check",
+      "target": "step:singapore-citation-check:flag-hallucinated-authorities",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:singapore-citation-check",
+      "target": "step:singapore-citation-check:report-with-confidence-and-escalation",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "domain:citation-integrity",
+      "target": "flow:sg-statutory-reference-audit",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:sg-statutory-reference-audit",
+      "target": "step:sg-statutory-reference-audit:parse-statutory-references",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:sg-statutory-reference-audit",
+      "target": "step:sg-statutory-reference-audit:retrieve-candidate-provisions",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:sg-statutory-reference-audit",
+      "target": "step:sg-statutory-reference-audit:classify-reference-status",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:sg-statutory-reference-audit",
+      "target": "step:sg-statutory-reference-audit:surface-results-in-word-add-in",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "domain:citation-integrity",
+      "target": "flow:statutory-first-pass-analysis",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:statutory-first-pass-analysis",
+      "target": "step:statutory-first-pass-analysis:read-definitions-first",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:statutory-first-pass-analysis",
+      "target": "step:statutory-first-pass-analysis:map-statutory-structure",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:statutory-first-pass-analysis",
+      "target": "step:statutory-first-pass-analysis:parse-operator-words",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:statutory-first-pass-analysis",
+      "target": "step:statutory-first-pass-analysis:apply-canons-of-construction",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:statutory-first-pass-analysis",
+      "target": "step:statutory-first-pass-analysis:analyze-requirements-and-exemptions",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:statutory-first-pass-analysis",
+      "target": "step:statutory-first-pass-analysis:handle-preemption-and-multistate",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "flow:statutory-first-pass-analysis",
+      "target": "step:statutory-first-pass-analysis:draft-analysis-for-attorney-review",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "domain:document-drafting-assembly",
+      "target": "flow:coquill-document-assembly",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:coquill-document-assembly",
+      "target": "step:coquill-document-assembly:discover-template",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:coquill-document-assembly",
+      "target": "step:coquill-document-assembly:analyze-template-manifest",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:coquill-document-assembly",
+      "target": "step:coquill-document-assembly:conduct-variable-interview",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:coquill-document-assembly",
+      "target": "step:coquill-document-assembly:confirm-and-validate-answers",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:coquill-document-assembly",
+      "target": "step:coquill-document-assembly:render-draft",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "flow:coquill-document-assembly",
+      "target": "step:coquill-document-assembly:validate-rendered-output",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "flow:coquill-document-assembly",
+      "target": "step:coquill-document-assembly:generate-session-transcript",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "domain:document-drafting-assembly",
+      "target": "flow:collate-reviewer-feedback",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:collate-reviewer-feedback",
+      "target": "step:collate-reviewer-feedback:gather-reviewer-drafts",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:collate-reviewer-feedback",
+      "target": "step:collate-reviewer-feedback:extract-markup-units",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:collate-reviewer-feedback",
+      "target": "step:collate-reviewer-feedback:group-into-resolution-units",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:collate-reviewer-feedback",
+      "target": "step:collate-reviewer-feedback:flag-conflicts-and-high-risk",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:collate-reviewer-feedback",
+      "target": "step:collate-reviewer-feedback:deliver-resolution-checklist",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:document-drafting-assembly",
+      "target": "flow:batch-playbook-redlining",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:batch-playbook-redlining",
+      "target": "step:batch-playbook-redlining:load-playbook-and-contracts",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:batch-playbook-redlining",
+      "target": "step:batch-playbook-redlining:confirm-privilege-and-byok-warnings",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:batch-playbook-redlining",
+      "target": "step:batch-playbook-redlining:generate-amend-insert-delete-ops",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:batch-playbook-redlining",
+      "target": "step:batch-playbook-redlining:apply-native-tracked-changes",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:batch-playbook-redlining",
+      "target": "step:batch-playbook-redlining:require-per-change-lawyer-review",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:document-drafting-assembly",
+      "target": "flow:legal-translation",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:legal-translation",
+      "target": "step:legal-translation:classify-document-type",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:legal-translation",
+      "target": "step:legal-translation:build-pre-translation-glossary",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:legal-translation",
+      "target": "step:legal-translation:translate-legal-effect",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:legal-translation",
+      "target": "step:legal-translation:apply-language-conventions",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:legal-translation",
+      "target": "step:legal-translation:attach-translator-notes-and-escalate",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:document-drafting-assembly",
+      "target": "flow:plain-language-rewrite",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:plain-language-rewrite",
+      "target": "step:plain-language-rewrite:calibrate-target-audience",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:plain-language-rewrite",
+      "target": "step:plain-language-rewrite:apply-plain-language-patterns",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:plain-language-rewrite",
+      "target": "step:plain-language-rewrite:rewrite-preserving-meaning",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:plain-language-rewrite",
+      "target": "step:plain-language-rewrite:explain-changes-and-flag-risks",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "flow:author-new-skill",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:author-new-skill",
+      "target": "step:author-new-skill:elicit-skill-requirements",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:author-new-skill",
+      "target": "step:author-new-skill:fall-back-to-wizard-mode",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:author-new-skill",
+      "target": "step:author-new-skill:craft-trigger-description",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:author-new-skill",
+      "target": "step:author-new-skill:generate-skill-folder",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:author-new-skill",
+      "target": "step:author-new-skill:optionally-enable-self-improvement",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "flow:run-behavioral-evals",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:run-behavioral-evals",
+      "target": "step:run-behavioral-evals:define-eval-scenarios",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:run-behavioral-evals",
+      "target": "step:run-behavioral-evals:run-scenarios-in-harness",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:run-behavioral-evals",
+      "target": "step:run-behavioral-evals:assert-required-elements",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:run-behavioral-evals",
+      "target": "step:run-behavioral-evals:enforce-hard-fail-conditions",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "flow:run-deterministic-tests",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:run-deterministic-tests",
+      "target": "step:run-deterministic-tests:discover-test-modules",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:run-deterministic-tests",
+      "target": "step:run-deterministic-tests:test-applicability-thresholds",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:run-deterministic-tests",
+      "target": "step:run-deterministic-tests:test-citation-audit",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:run-deterministic-tests",
+      "target": "step:run-deterministic-tests:test-conflict-resolution",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:run-deterministic-tests",
+      "target": "step:run-deterministic-tests:test-precedent-and-corpus-integrity",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "flow:adversarial-qc-certificate",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:adversarial-qc-certificate",
+      "target": "step:adversarial-qc-certificate:configure-depth-and-mode",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:adversarial-qc-certificate",
+      "target": "step:adversarial-qc-certificate:select-qc-checklist",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:adversarial-qc-certificate",
+      "target": "step:adversarial-qc-certificate:spawn-two-verification-agents",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:adversarial-qc-certificate",
+      "target": "step:adversarial-qc-certificate:compare-agent-findings",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:adversarial-qc-certificate",
+      "target": "step:adversarial-qc-certificate:emit-qc-certificate",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "flow:contribute-skill-to-registry",
+      "type": "contains_flow",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "flow:contribute-skill-to-registry",
+      "target": "step:contribute-skill-to-registry:fork-and-draft-skill",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.1
+    },
+    {
+      "source": "flow:contribute-skill-to-registry",
+      "target": "step:contribute-skill-to-registry:attest-legal-substance",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.2
+    },
+    {
+      "source": "flow:contribute-skill-to-registry",
+      "target": "step:contribute-skill-to-registry:run-pr-readiness-checks",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.3
+    },
+    {
+      "source": "flow:contribute-skill-to-registry",
+      "target": "step:contribute-skill-to-registry:declare-access-modes",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.4
+    },
+    {
+      "source": "flow:contribute-skill-to-registry",
+      "target": "step:contribute-skill-to-registry:merge-and-register",
+      "type": "flow_step",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:litigation-document-review",
+      "target": "domain:citation-integrity",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "Litigation drafts reviewed here — pleadings, skeleton arguments, witness statements — are handed to the citation and proposition audits as a pre-filing quality gate before submission.",
+      "weight": 0.7
+    },
+    {
+      "source": "domain:contract-review",
+      "target": "domain:document-drafting-assembly",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "Review findings include preferred redline language that the drafting domain's tracked-changes tooling (redlines, superdoc-redlines, the Vibe Legal batch redliner) applies to DOCX files as native Word revisions.",
+      "weight": 0.7
+    },
+    {
+      "source": "domain:privacy-regulatory-compliance",
+      "target": "domain:contract-review",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "Vendor privacy-policy triage escalates into the DPA Checklist Review when red flags warrant contract-level diligence, and navigator gap findings drive processor-contract remediation.",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:litigation-document-review",
+      "target": "domain:document-drafting-assembly",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "Chronologies built from case papers feed the statement-of-facts drafting variant, and multi-reviewer markups on litigation drafts are consolidated by the reviewer-feedback collation flow.",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:privacy-regulatory-compliance",
+      "target": "domain:citation-integrity",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "The navigator's citation_audit.py applies the registry-wide citation-discipline principle to privacy memos: every substantive claim must carry an inline statutory citation, mirroring the verification skills' no-memory rule.",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "domain:litigation-document-review",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "Each UK review skill ships an evals.yaml consumed by the behavioral eval harness, asserting confidence bands and hard-fail conditions like verifying from memory.",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "domain:privacy-regulatory-compliance",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "The deterministic stdlib unittest suite (run_all.py plus five test modules over fixtures and the enforcement corpus) pins the navigator's script engine.",
+      "weight": 0.6
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "domain:contract-review",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "Contract-review skills carry acceptance test plans and 2026-05 LegalQuants QA remediation logs produced by the registry's QA process.",
+      "weight": 0.5
+    },
+    {
+      "source": "domain:skill-quality-assurance",
+      "target": "domain:document-drafting-assembly",
+      "type": "cross_domain",
+      "direction": "forward",
+      "description": "Adversarial QC spawns paired verification agents over AI-drafted deliverables (assembled documents, redlines, translations) before they leave the building.",
+      "weight": 0.5
+    }
+  ],
+  "layers": [],
+  "tour": []
+}
